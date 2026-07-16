@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-vinhhang-charcoal: #1c1a19;
+  --color-vinhhang-warm-stone: #eaeae1;
+  --color-vinhhang-sand: #f5f4ed;
+  --color-vinhhang-brass: #b89b72;
+  --color-vinhhang-gold-light: #d4b282;
+  --color-vinhhang-olive: #3d4035;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  background-color: #faf9f6;
+  color: #2c2a29;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar matching luxury aesthetic */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f4ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b89b72;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1855e;
+}
+
+/* Elegant fade overlays for images */
+.vinhhang-overlay-dark {
+  background: linear-gradient(to bottom, rgba(28, 26, 25, 0.2) 0%, rgba(28, 26, 25, 0.8) 100%);
+}
+
+.vinhhang-overlay-light {
+  background: linear-gradient(to right, rgba(245, 244, 237, 0.95) 0%, rgba(245, 244, 237, 0.2) 100%);
+}
+
+/* Delicate elegant transitions */
+.transition-luxury {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle pulse for active indicators */
+@keyframes delicatePulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.15);
+  }
+}
+
+.delicate-pulse {
+  animation: delicatePulse 4s infinite ease-in-out;
+}
+
+/* Luxury radar pulse for interactive hotspots */
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.radar-pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1.5px solid #d4b282;
+  animation: radarPulse 2s infinite cubic-bezier(0.25, 0, 0, 1);
+  pointer-events: none;
+}
+
+/* Chat Concierge Typing Indicator */
+@keyframes typingDotBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.typing-dot {
+  width: 4px;
+  height: 4px;
+  background-color: #b89b72;
+  border-radius: 50%;
+  display: inline-block;
+  animation: typingDotBounce 1.2s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}

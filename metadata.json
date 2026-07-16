@@ -1,0 +1,6 @@
+{
+  "name": "Thiên Phúc Vĩnh Hằng Viên",
+  "description": "Trang thông tin di sản tâm linh cao cấp 5-sao tại Yên Tử với thiết kế Nghệ thuật thiền tịnh, bản đồ phong thủy tương tác, chẩn đoán tâm linh và hệ thống thiền nhạc.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
