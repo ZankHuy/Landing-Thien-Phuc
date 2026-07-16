@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Thiên Phúc Vĩnh Hằng Viên
 
-# Run and deploy your AI Studio app
+Landing page giới thiệu dự án công viên nghĩa trang cao cấp **Thiên Phúc Vĩnh Hằng Viên** tại Uông Bí, Quảng Ninh.
 
-This contains everything you need to run your app locally.
+## Tính năng
 
-View your app in AI Studio: https://ai.studio/apps/1c9ef252-8b99-455a-b5ec-66c2785ba58b
+- Thiết kế premium, hiệu ứng cuộn mượt mà
+- Bản đồ Google Maps định vị dự án
+- Giới thiệu sản phẩm & tiện ích
+- Form đăng ký tư vấn đơn giản
+- Responsive trên mọi thiết bị
 
-## Run Locally
+## Công nghệ
 
-**Prerequisites:**  Node.js
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS 4
+- Framer Motion
+- Lucide Icons
 
+## Chạy local
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+## Build production
+
+```bash
+npm run build
+```
+
+## Deploy
+
+Site được deploy tự động qua GitHub Pages từ branch `roots`.
+
+**Live**: [https://zankhuy.github.io/Landing-Thien-Phuc/](https://zankhuy.github.io/Landing-Thien-Phuc/)
