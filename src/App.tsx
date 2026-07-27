@@ -327,13 +327,21 @@ export default function App() {
 
 
 
+  const scrollToSection = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const elem = document.getElementById(id);
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2c2a29] font-sans antialiased selection:bg-[#c5a880]/30 selection:text-[#1c1a19]">
       
       {/* Elegant minimalist sticky header */}
       <header className="sticky top-0 z-40 bg-[#faf9f6]/90 backdrop-blur-md border-b border-[#eaeae1]/50 px-6 lg:px-12 py-5 transition-luxury">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="flex items-center gap-3 group">
             <img 
               src={`${import.meta.env.BASE_URL}Images/Logo/TPVHV_horizontal.png`} 
               alt="Thiên Phúc Vĩnh Hằng Viên Logo" 
@@ -343,11 +351,11 @@ export default function App() {
 
           {/* Desktop Navigation links */}
           <nav className="hidden md:flex items-center gap-8 text-[11px] font-medium tracking-widest text-[#2c2a29]/70 uppercase">
-            <a href="#narrative" className="hover:text-[#b89b72] transition-colors">Tâm Niệm</a>
-            <a href="#paths" className="hover:text-[#b89b72] transition-colors">Bảy Bậc Thiền</a>
-            <a href="#landscape" className="hover:text-[#b89b72] transition-colors">Tuyệt Tác Cảnh Sắc</a>
-            <a href="#fengshui" className="hover:text-[#b89b72] transition-colors">Sơ Đồ Phong Thủy</a>
-            <a href="#collection" className="hover:text-[#b89b72] transition-colors">Bộ Sưu Tập</a>
+            <button onClick={scrollToSection("narrative")} className="hover:text-[#b89b72] transition-colors cursor-pointer">Tâm Niệm</button>
+            <button onClick={scrollToSection("paths")} className="hover:text-[#b89b72] transition-colors cursor-pointer">Bảy Bậc Thiền</button>
+            <button onClick={scrollToSection("landscape")} className="hover:text-[#b89b72] transition-colors cursor-pointer">Tuyệt Tác Cảnh Sắc</button>
+            <button onClick={scrollToSection("fengshui")} className="hover:text-[#b89b72] transition-colors cursor-pointer">Sơ Đồ Phong Thủy</button>
+            <button onClick={scrollToSection("collection")} className="hover:text-[#b89b72] transition-colors cursor-pointer">Bộ Sưu Tập</button>
           </nav>
 
           <div className="flex items-center gap-4">
@@ -372,12 +380,12 @@ export default function App() {
               )}
             </button>
 
-            <a 
-              href="#reservation" 
-              className="px-5 py-2.5 bg-[#1c1a19] text-[#f5f4ed] text-[10px] tracking-widest uppercase font-medium hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury rounded-none"
+            <button 
+              onClick={scrollToSection("reservation")} 
+              className="px-5 py-2.5 bg-[#1c1a19] text-[#f5f4ed] text-[10px] tracking-widest uppercase font-medium hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury rounded-none cursor-pointer"
             >
               Đón Tiếp VIP
-            </a>
+            </button>
           </div>
         </div>
       </header>
@@ -447,15 +455,15 @@ export default function App() {
               transition={{ delay: 1.2, duration: 1 }}
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
-              <a 
-                href="#reservation"
-                className="px-8 py-3.5 bg-white text-[#1c1a19] text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury shadow-lg text-center"
+              <button 
+                onClick={scrollToSection("reservation")}
+                className="px-8 py-3.5 bg-white text-[#1c1a19] text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury shadow-lg text-center cursor-pointer"
               >
                 Đặt lịch khảo sát riêng tư
-              </a>
+              </button>
               <button 
                 onClick={() => setIsConciergeOpen(true)}
-                className="px-8 py-3.5 border border-white/40 bg-black/40 backdrop-blur-md text-white text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-white/20 hover:border-white transition-luxury text-center"
+                className="px-8 py-3.5 border border-white/40 bg-black/40 backdrop-blur-md text-white text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-white/20 hover:border-white transition-luxury text-center cursor-pointer"
               >
                 Liên hệ Quản gia riêng
               </button>
@@ -898,12 +906,12 @@ export default function App() {
                 <div className="bg-[#f5f4ed] p-4 text-xs font-sans font-light text-stone-600 leading-relaxed border-l-2 border-[#b89b72]">
                   Ban quản lý cung cấp dịch vụ đưa đón bằng xe Limousine hạng sang miễn phí phục vụ các gia đình tham quan khảo sát thực tế.
                 </div>
-                <a 
-                  href="#reservation"
-                  className="w-full py-3.5 bg-[#1c1a19] text-[#f5f4ed] text-[10px] tracking-widest uppercase font-bold text-center block hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury"
+                <button 
+                  onClick={scrollToSection("reservation")}
+                  className="w-full py-3.5 bg-[#1c1a19] text-[#f5f4ed] text-[10px] tracking-widest uppercase font-bold text-center block hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury cursor-pointer"
                 >
                   Đặt xe đưa đón khảo sát
-                </a>
+                </button>
               </div>
             </div>
 
@@ -1017,7 +1025,7 @@ export default function App() {
                 </div>
                 <div className="mt-6 pt-5 border-t border-[#eaeae1] flex justify-between items-center">
                   <span className="text-[10px] uppercase tracking-widest text-stone-400 font-mono">BÀN GIAO VĨNH VIỄN</span>
-                  <a href="#reservation" className="text-xs font-semibold text-[#1c1a19] hover:text-[#b89b72] transition-colors uppercase tracking-widest">Đăng ký ngay →</a>
+                  <button onClick={scrollToSection("reservation")} className="text-xs font-semibold text-[#1c1a19] hover:text-[#b89b72] transition-colors uppercase tracking-widest cursor-pointer">Đăng ký ngay →</button>
                 </div>
               </div>
             )}
@@ -1058,7 +1066,7 @@ export default function App() {
                 </div>
                 <div className="mt-6 pt-5 border-t border-[#eaeae1] flex justify-between items-center">
                   <span className="text-[10px] uppercase tracking-widest text-[#b89b72] font-mono font-bold">CHIẾT KHẤU GIA TỘC</span>
-                  <a href="#reservation" className="text-xs font-semibold text-[#b89b72] hover:text-[#1c1a19] transition-colors uppercase tracking-widest">Đăng ký ngay →</a>
+                  <button onClick={scrollToSection("reservation")} className="text-xs font-semibold text-[#b89b72] hover:text-[#1c1a19] transition-colors uppercase tracking-widest cursor-pointer">Đăng ký ngay →</button>
                 </div>
               </div>
             )}
