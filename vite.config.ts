@@ -23,8 +23,8 @@ function copyFolderSync(from: string, to: string) {
 }
 
 export default defineConfig({
-  // GitHub Pages project site: https://zankhuy.github.io/Landing-Thien-Phuc/
-  base: '/Landing-Thien-Phuc/',
+  // Relative base for 100% reliable GitHub Pages /docs deployment
+  base: './',
   build: {
     outDir: 'docs',
   },
@@ -36,7 +36,7 @@ export default defineConfig({
       configureServer(server) {
         // Serve Images directory during development
         const imagesDir = path.resolve(__dirname, 'Images');
-        server.middlewares.use('/Landing-Thien-Phuc/Images', (req: Connect.IncomingMessage, res: any, next: Connect.NextFunction) => {
+        server.middlewares.use('/Images', (req: Connect.IncomingMessage, res: any, next: Connect.NextFunction) => {
           const filePath = path.join(imagesDir, req.url || '');
           if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
             res.setHeader('Content-Type', getContentType(filePath));
@@ -54,6 +54,10 @@ export default defineConfig({
             copyFolderSync(src, dest);
             console.log('Successfully copied Images directory to docs/Images');
           }
+          // Ensure .nojekyll exists in docs directory
+          fs.writeFileSync(path.resolve(__dirname, 'docs/.nojekyll'), '');
+          fs.writeFileSync(path.resolve(__dirname, '.nojekyll'), '');
+          console.log('Created .nojekyll file');
         } catch (e) {
           console.error('Failed to copy Images directory:', e);
         }
