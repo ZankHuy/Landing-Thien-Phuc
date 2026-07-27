@@ -395,10 +395,10 @@ export default function App() {
             className="absolute inset-0 bg-cover bg-center md:bg-[center_30%]"
             style={{ backgroundImage: `url('${import.meta.env.BASE_URL}Images/Photos/tong_quan.jpg')` }}
           />
-          {/* Subtle left-to-right gradient overlay to ensure text legibility while leaving right 70% wide and bright */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1c1a19]/95 via-[#1c1a19]/65 to-transparent md:w-[65%]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1c1a19] via-transparent to-[#1c1a19]/30 h-28 top-0" />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#faf9f6] to-transparent" />
+          {/* Smooth seamless gradient overlays for text legibility and flawless blending */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1c1a19]/90 via-[#1c1a19]/45 via-50% to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1c1a19]/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#faf9f6] to-transparent pointer-events-none" />
         </div>
 
         {/* Side-aligned text layout (Dồn title sang 1 bên, view ảnh rộng) */}
