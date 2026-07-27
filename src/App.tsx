@@ -957,7 +957,7 @@ export default function App() {
                   : "bg-transparent text-stone-500 border-stone-200 hover:text-stone-800 hover:border-stone-400"
               }`}
             >
-              Mộ Đơn / Đôi
+              Mộ Gia Đình
             </button>
             <button
               onClick={() => setActiveProductFilter("family")}
@@ -967,7 +967,7 @@ export default function App() {
                   : "bg-transparent text-stone-500 border-stone-200 hover:text-stone-800 hover:border-stone-400"
               }`}
             >
-              Mộ Gia Tộc
+              Đại Gia Tộc
             </button>
             <button
               onClick={() => setActiveProductFilter("bespoke")}
@@ -977,97 +977,133 @@ export default function App() {
                   : "bg-transparent text-stone-500 border-stone-200 hover:text-stone-800 hover:border-stone-400"
               }`}
             >
-              Bespoke Nghệ Thuật
+              Mộ Đơn / Đôi
             </button>
           </div>
 
           {/* Product Items Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {/* Item 1 */}
+            {/* Item 1: Mộ Gia Đình (8.jpg) */}
             {(activeProductFilter === "all" || activeProductFilter === "single") && (
-              <div className="border border-[#eaeae1] bg-[#faf9f6] p-8 flex flex-col justify-between hover:border-[#b89b72] transition-luxury">
+              <div className="group border border-[#eaeae1] bg-[#faf9f6] p-6 flex flex-col justify-between hover:border-[#b89b72] transition-luxury shadow-sm hover:shadow-md">
                 <div>
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-[9px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">AN LẠC COLLECTION</span>
+                  {/* Image Preview */}
+                  <div className="aspect-[16/10] overflow-hidden mb-5 bg-stone-200 border border-[#eaeae1] relative">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}Images/Photos/8.jpg`} 
+                      alt="Mộ Gia Đình" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    />
+                    <span className="absolute top-3 left-3 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[8px] tracking-[0.2em] font-bold uppercase py-1 px-2.5">
+                      TỶ LỆ 53%
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-[9px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">GIA ĐÌNH COLLECTION</span>
                     <span className="text-[10px] text-emerald-800 italic font-serif">Sổ hồng riêng</span>
                   </div>
-                  <h4 className="font-serif text-2xl font-light text-[#1c1a19] tracking-wide mb-2">Mộ Đơn & Đôi Gia Cảnh</h4>
-                  <div className="w-8 h-px bg-[#b89b72] my-4"></div>
-                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-6">
-                    Giải pháp hiếu nghĩa tôn nghiêm dành riêng cho đấng sinh thành. Quy hoạch chuẩn chỉ, bao bọc bởi thảm cỏ nhung Nhật Bản rực rỡ và thông tùng bách xanh mướt.
+                  <h4 className="font-serif text-2xl font-light text-[#1c1a19] tracking-wide mb-2">Mộ Gia Đình</h4>
+                  <div className="w-8 h-px bg-[#b89b72] my-3"></div>
+                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-5">
+                    Quy hoạch không gian ấm cúng cho gia đình 4 - 12 mộ phần. Bao bọc bởi thảm cỏ nhung Nhật Bản rực rỡ và thông tùng bách xanh mướt.
                   </p>
-                  <ul className="text-xs text-stone-600 flex flex-col gap-2.5">
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Diện tích: 4.5m² - 9.0m²</li>
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Đá Granite tự nhiên nhập khẩu mài bóng</li>
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Hệ thống lọc thoát nước vi sinh châu Âu</li>
+                  <ul className="text-xs text-stone-600 flex flex-col gap-2">
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Diện tích khuôn viên: ~49.48 m²</li>
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Số lượng giới hạn: 1.436 mộ</li>
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Cát táng đôi / đơn phối cảnh sinh thái</li>
                   </ul>
                 </div>
-                <div className="mt-8 pt-6 border-t border-[#eaeae1] flex justify-between items-center">
+                <div className="mt-6 pt-5 border-t border-[#eaeae1] flex justify-between items-center">
                   <span className="text-[10px] uppercase tracking-widest text-stone-400 font-mono">BÀN GIAO VĨNH VIỄN</span>
                   <a href="#reservation" className="text-xs font-semibold text-[#1c1a19] hover:text-[#b89b72] transition-colors uppercase tracking-widest">Đăng ký ngay →</a>
                 </div>
               </div>
             )}
 
-            {/* Item 2 */}
+            {/* Item 2: Khuôn Viên Đại Gia Tộc (7.jpg) */}
             {(activeProductFilter === "all" || activeProductFilter === "family") && (
-              <div className="border border-[#b89b72]/40 bg-white p-8 flex flex-col justify-between relative shadow-sm hover:border-[#b89b72] transition-luxury">
-                <span className="absolute -top-3.5 right-6 bg-[#b89b72] text-white text-[8px] tracking-[0.2em] font-bold uppercase py-1 px-3">
+              <div className="group border border-[#b89b72]/40 bg-white p-6 flex flex-col justify-between relative shadow-sm hover:border-[#b89b72] transition-luxury hover:shadow-md">
+                <span className="absolute -top-3.5 right-6 bg-[#b89b72] text-white text-[8px] tracking-[0.2em] font-bold uppercase py-1 px-3 z-10 shadow-sm">
                   ƯU TIÊN LỰA CHỌN
                 </span>
                 <div>
-                  <div className="flex justify-between items-center mb-4">
+                  {/* Image Preview */}
+                  <div className="aspect-[16/10] overflow-hidden mb-5 bg-stone-200 border border-[#eaeae1] relative">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}Images/Photos/7.jpg`} 
+                      alt="Khuôn Viên Đại Gia Tộc" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    />
+                    <span className="absolute top-3 left-3 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[8px] tracking-[0.2em] font-bold uppercase py-1 px-2.5">
+                      TỶ LỆ 15%
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between items-center mb-2">
                     <span className="text-[9px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">VƯƠNG TỘC COLLECTION</span>
                     <span className="text-[10px] text-emerald-800 italic font-serif">Mái đá tạc quý</span>
                   </div>
                   <h4 className="font-serif text-2xl font-light text-[#1c1a19] tracking-wide mb-2">Khuôn Viên Đại Gia Tộc</h4>
-                  <div className="w-8 h-px bg-[#b89b72] my-4"></div>
-                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-6">
-                    Khẳng định uy thế, lưu giữ vương triều ký ức lâu đời của gia quyến. Được thiết kế cổng đá tạc khắc rồng phượng thủ công uy nghi, khoảng sân rộng tế lễ và hàng rào cây xanh sinh thái biệt lập.
+                  <div className="w-8 h-px bg-[#b89b72] my-3"></div>
+                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-5">
+                    Khẳng định uy thế, lưu giữ vương triều ký ức lâu đời của gia quyến. Cổng đá tạc khắc rồng phượng thủ công uy nghi và sân tế lễ rộng rãi.
                   </p>
-                  <ul className="text-xs text-stone-600 flex flex-col gap-2.5">
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Diện tích đa dạng: 50m² - 250m²</li>
+                  <ul className="text-xs text-stone-600 flex flex-col gap-2">
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Diện tích khuôn viên: ~117.26 m²</li>
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Số lượng cực hiếm: 174 mộ</li>
                     <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> 100% đá khối cao cấp chọn lựa tỉ mỉ</li>
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Thiết kế cuốn thư và lư hương phong thủy</li>
                   </ul>
                 </div>
-                <div className="mt-8 pt-6 border-t border-[#eaeae1] flex justify-between items-center">
+                <div className="mt-6 pt-5 border-t border-[#eaeae1] flex justify-between items-center">
                   <span className="text-[10px] uppercase tracking-widest text-[#b89b72] font-mono font-bold">CHIẾT KHẤU GIA TỘC</span>
                   <a href="#reservation" className="text-xs font-semibold text-[#b89b72] hover:text-[#1c1a19] transition-colors uppercase tracking-widest">Đăng ký ngay →</a>
                 </div>
               </div>
             )}
 
-            {/* Item 3 */}
+            {/* Item 3: Mộ Đơn / Đôi (9.jpg) */}
             {(activeProductFilter === "all" || activeProductFilter === "bespoke") && (
-              <div className="border border-[#eaeae1] bg-[#faf9f6] p-8 flex flex-col justify-between hover:border-[#b89b72] transition-luxury">
+              <div className="group border border-[#eaeae1] bg-[#faf9f6] p-6 flex flex-col justify-between hover:border-[#b89b72] transition-luxury shadow-sm hover:shadow-md">
                 <div>
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-[9px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">ARTISAN COMMISSION</span>
-                    <span className="text-[10px] text-emerald-800 italic font-serif">Kỷ vật độc bản</span>
+                  {/* Image Preview */}
+                  <div className="aspect-[16/10] overflow-hidden mb-5 bg-stone-200 border border-[#eaeae1] relative">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}Images/Photos/9.jpg`} 
+                      alt="Mộ Đơn / Đôi" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    />
+                    <span className="absolute top-3 left-3 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[8px] tracking-[0.2em] font-bold uppercase py-1 px-2.5">
+                      TỶ LỆ 30%
+                    </span>
                   </div>
-                  <h4 className="font-serif text-2xl font-light text-[#1c1a19] tracking-wide mb-2">Mộ Nghệ Thuật Bản Giới</h4>
-                  <div className="w-8 h-px bg-[#b89b72] my-4"></div>
-                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-6">
-                    Bản phác thảo nghệ thuật điêu khắc đương đại của riêng kiến trúc sư hàng đầu dành tặng dòng tộc Quý khách. Nơi câu chuyện cuộc đời được lưu danh vĩnh viễn trên những tác phẩm nghệ thuật đá tạc duy mỹ.
+
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-[9px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">AN LẠC COLLECTION</span>
+                    <span className="text-[10px] text-emerald-800 italic font-serif">Kỷ vật tôn nghiêm</span>
+                  </div>
+                  <h4 className="font-serif text-2xl font-light text-[#1c1a19] tracking-wide mb-2">Mộ Đơn / Đôi</h4>
+                  <div className="w-8 h-px bg-[#b89b72] my-3"></div>
+                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-5">
+                    Giải pháp hiếu nghĩa tôn nghiêm dành riêng cho đấng sinh thành hoặc cặp đôi. Thiết kế đá Granite mài bóng hiện đại và thanh tịnh.
                   </p>
-                  <ul className="text-xs text-stone-600 flex flex-col gap-2.5">
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Thiết kế 3D cá nhân hóa hoàn toàn</li>
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Điêu khắc đá mỹ thuật cao tạc tác theo yêu cầu</li>
-                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Phù hợp di nguyện của riêng gia chủ</li>
+                  <ul className="text-xs text-stone-600 flex flex-col gap-2">
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Diện tích khuôn viên: ~5.19 m²</li>
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Quy mô quy hoạch: 7.763 mộ</li>
+                    <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[#b89b72]" /> Lọc thoát nước vi sinh sinh thái châu Âu</li>
                   </ul>
                 </div>
-                <div className="mt-8 pt-6 border-t border-[#eaeae1] flex justify-between items-center">
-                  <span className="text-[10px] uppercase tracking-widest text-stone-400 font-mono">BẢN VẼ 3D ĐỘC QUYỀN</span>
+                <div className="mt-6 pt-5 border-t border-[#eaeae1] flex justify-between items-center">
+                  <span className="text-[10px] uppercase tracking-widest text-stone-400 font-mono">BẢN VẼ PHONG THỦY</span>
                   <button 
                     onClick={() => {
-                      setBookingForm(prev => ({ ...prev, note: "Tôi muốn đặt thiết kế riêng biệt cho Mộ Nghệ Thuật độc bản." }));
+                      setBookingForm(prev => ({ ...prev, note: "Tôi muốn tìm hiểu thông tin về Mộ Đơn / Đôi." }));
                       document.getElementById("reservation")?.scrollIntoView({ behavior: "smooth" });
                     }}
                     className="text-xs font-semibold text-[#1c1a19] hover:text-[#b89b72] transition-colors uppercase tracking-widest"
                   >
-                    Yêu cầu 3D →
+                    Đăng ký ngay →
                   </button>
                 </div>
               </div>
