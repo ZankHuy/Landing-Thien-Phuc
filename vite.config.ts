@@ -25,6 +25,9 @@ function copyFolderSync(from: string, to: string) {
 export default defineConfig({
   // GitHub Pages project site: https://zankhuy.github.io/Landing-Thien-Phuc/
   base: '/Landing-Thien-Phuc/',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [
     react(),
     tailwindcss(),
@@ -45,11 +48,11 @@ export default defineConfig({
       },
       closeBundle() {
         const src = path.resolve(__dirname, 'Images');
-        const dest = path.resolve(__dirname, 'dist/Images');
+        const dest = path.resolve(__dirname, 'docs/Images');
         try {
           if (fs.existsSync(src)) {
             copyFolderSync(src, dest);
-            console.log('Successfully copied Images directory to dist/Images');
+            console.log('Successfully copied Images directory to docs/Images');
           }
         } catch (e) {
           console.error('Failed to copy Images directory:', e);

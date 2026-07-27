@@ -1,4 +1,5 @@
-const img = (file: string) => `${import.meta.env.BASE_URL}Images/${file}`;
+export const img = (file: string) => `${import.meta.env.BASE_URL}Images/Photos/${file}`;
+export const logoImg = (file: string) => `${import.meta.env.BASE_URL}Images/Logo/${file}`;
 
 export interface EnlightenmentStep {
   id: string;
@@ -120,6 +121,33 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     longDescription: "Công trình đền miếu cổ kính tọa lạc ngay trên long mạch của dự án. Từng chi tiết chạm khắc rồng phượng, mái đao cong vút được hoàn thiện bởi các thợ mộc mỹ nghệ truyền thống. Nơi đây là điểm cầu an, cầu siêu và hội tụ sinh khí tốt lành bảo vệ sự thịnh vượng đời đời của gia chủ.",
     imageUrl: img("den_trinh.jpg"),
     tag: "Đền Trình"
+  },
+  {
+    id: "choi-ngam-canh",
+    title: "Chòi Tọa Thiền Sơn Thủy",
+    english: "Panoramic Pavilion",
+    description: "Chòi nghỉ ngơi thưởng cảnh thiết kế mở, thu trọn toàn bộ bức tranh phong cảnh hùng vĩ của dải núi Kim Cương.",
+    longDescription: "Không gian nghỉ chân thanh tịnh dành cho gia quyến khi ghé thăm viếng mộ. Kiến trúc mái ngói cong truyền thống kết hợp gỗ tự nhiên quý hiếm, mở ra tầm nhìn bao quát toàn bộ quy hoạch tựa sơn hướng thủy.",
+    imageUrl: img("choi_ngoi_ngam_canh.jpg"),
+    tag: "Tọa Thiền"
+  },
+  {
+    id: "thuy-ta",
+    title: "Nhà Hàng Thủy Tạ",
+    english: "Lakeside Tea & Dining",
+    description: "Khu vực ẩm thực trà chay thượng hạng ven hồ, nơi gia tộc sum họp trong không khí ấm cúng và tôn nghiêm.",
+    longDescription: "Khu nhà hàng Thủy Tạ ven hồ tĩnh tại cung cấp các món ăn chay thanh tịnh, trà đạo Á Đông và không gian đón tiếp sang trọng cho các nghi lễ gia tộc.",
+    imageUrl: img("nha_hang_thuy_ta.jpg"),
+    tag: "Thủy Tạ Quán"
+  },
+  {
+    id: "nha-dich-vu",
+    title: "Khu Dịch Vụ 5-Sao",
+    english: "VIP Hospitality Suite",
+    description: "Trung tâm quản gia chuyên nghiệp phục vụ 24/7 mọi tâm nguyện và nhu cầu của gia quyến.",
+    longDescription: "Tòa nhà dịch vụ trung tâm đạt chuẩn resort 5-sao với phòng tiếp khách VIP, khu vực tư vấn phong thủy riêng tư, cùng đội ngũ quản gia tận tâm hỗ trợ từng chi tiết nhỏ nhất.",
+    imageUrl: img("nha_dich_vu.jpg"),
+    tag: "Dịch Vụ VIP"
   }
 ];
 

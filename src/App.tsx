@@ -333,14 +333,13 @@ export default function App() {
       {/* Elegant minimalist sticky header */}
       <header className="sticky top-0 z-40 bg-[#faf9f6]/90 backdrop-blur-md border-b border-[#eaeae1]/50 px-6 lg:px-12 py-5 transition-luxury">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex flex-col">
-            <span className="font-serif text-lg tracking-[0.25em] uppercase font-light text-[#1c1a19]">
-              THIEN PHUC
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.4em] text-[#b89b72] font-semibold mt-0.5">
-              Vĩnh Hằng Viên • Di Sản Tâm Linh
-            </span>
-          </div>
+          <a href="#" className="flex items-center gap-3 group">
+            <img 
+              src={`${import.meta.env.BASE_URL}Images/Logo/TPVHV_horizontal.png`} 
+              alt="Thiên Phúc Vĩnh Hằng Viên Logo" 
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </a>
 
           {/* Desktop Navigation links */}
           <nav className="hidden md:flex items-center gap-8 text-[11px] font-medium tracking-widest text-[#2c2a29]/70 uppercase">
@@ -373,16 +372,6 @@ export default function App() {
               )}
             </button>
 
-            {/* Quick concierge button (Temporarily Disabled)
-            <button 
-              onClick={() => setIsConciergeOpen(true)}
-              className="hidden lg:flex items-center gap-2 px-3 py-1.5 border border-[#eaeae1] rounded-full text-[10px] uppercase tracking-widest text-[#2c2a29]/80 hover:border-[#b89b72] transition"
-            >
-              <MessageSquare className="w-3 h-3 text-[#b89b72]" />
-              Quản gia Tĩnh Tâm
-            </button>
-            */}
-
             <a 
               href="#reservation" 
               className="px-5 py-2.5 bg-[#1c1a19] text-[#f5f4ed] text-[10px] tracking-widest uppercase font-medium hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury rounded-none"
@@ -396,81 +385,87 @@ export default function App() {
       {/* ========================================== */}
       {/* HERO SECTION: Thien Phuc Meditative Splendor */}
       {/* ========================================== */}
-      <section className="relative h-[88vh] bg-[#1c1a19] flex items-center justify-center overflow-hidden">
-        {/* Immersive background photo with smooth slow scaling */}
-        <div className="absolute inset-0">
+      <section className="relative h-[90vh] min-h-[600px] bg-[#1c1a19] flex items-center overflow-hidden">
+        {/* Wide panoramic background photo with high clarity & subtle motion */}
+        <div className="absolute inset-0 z-0">
           <motion.div
-            initial={{ scale: 1.05, opacity: 0.3 }}
-            animate={{ scale: 1, opacity: 0.65 }}
-            transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('${import.meta.env.BASE_URL}Images/tong_quan.jpg')` }}
+            initial={{ scale: 1.04, opacity: 0.7 }}
+            animate={{ scale: 1, opacity: 0.95 }}
+            transition={{ duration: 3.5, ease: "easeOut" }}
+            className="absolute inset-0 bg-cover bg-center md:bg-[center_30%]"
+            style={{ backgroundImage: `url('${import.meta.env.BASE_URL}Images/Photos/tong_quan.jpg')` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1c1a19]/40 via-transparent to-[#faf9f6]" />
-          <div className="absolute inset-0 bg-black/20" />
+          {/* Subtle left-to-right gradient overlay to ensure text legibility while leaving right 70% wide and bright */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1c1a19]/95 via-[#1c1a19]/65 to-transparent md:w-[65%]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1c1a19] via-transparent to-[#1c1a19]/30 h-28 top-0" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#faf9f6] to-transparent" />
         </div>
 
-        {/* Minimalist layout alignment */}
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-          <motion.span 
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 1 }}
-            className="text-[10px] md:text-[11px] uppercase tracking-[0.5em] text-[#b89b72] font-semibold mb-4"
-          >
-            THE SANCTUARY OF ETERNAL PEACE
-          </motion.span>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 1.2 }}
-            className="font-serif text-4xl md:text-6xl lg:text-7xl font-light text-white tracking-wide leading-[1.15]"
-          >
-            Nơi Tâm Hồn An Trú<br />
-            <span className="font-serif italic font-normal text-[#eaeae1]">Trong Cõi Vĩnh Hằng</span>
-          </motion.h2>
-
-          <motion.div 
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 1, duration: 1.2 }}
-            className="w-16 h-px bg-[#b89b72] my-8"
-          />
-
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.9 }}
-            transition={{ delay: 1.2, duration: 1 }}
-            className="font-sans text-xs md:text-sm text-stone-200/90 font-light tracking-wide max-w-xl leading-relaxed"
-          >
-            Đón nhận long mạch linh thiêng từ non cao Yên Tử, Thiên Phúc dựng xây một cõi an lạc vĩnh cửu, hòa nhập tuyệt đối vào thiên nhiên tinh khôi và di sản gia tộc bất biến trường tồn.
-          </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4"
-          >
-            <a 
-              href="#reservation"
-              className="px-8 py-3.5 bg-white text-[#1c1a19] text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury shadow-sm"
+        {/* Side-aligned text layout (Dồn title sang 1 bên, view ảnh rộng) */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 py-12">
+          <div className="max-w-xl lg:max-w-2xl flex flex-col items-start text-left">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#1c1a19]/80 backdrop-blur-md border-l-2 border-[#b89b72] mb-6 shadow-md"
             >
-              Đặt lịch khảo sát riêng tư
-            </a>
-            <button 
-              onClick={() => setIsConciergeOpen(true)}
-              className="px-8 py-3.5 border border-white/30 text-white text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-white/10 hover:border-white transition-luxury"
+              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] text-[#b89b72] font-semibold">
+                THE SANCTUARY OF ETERNAL PEACE
+              </span>
+            </motion.div>
+            
+            <motion.h1 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 1.2 }}
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-wide leading-[1.15] mb-6 drop-shadow-md"
             >
-              Liên hệ Quản gia riêng
-            </button>
-          </motion.div>
+              Nơi Tâm Hồn An Trú<br />
+              <span className="font-serif italic font-normal text-[#b89b72]">Trong Cõi Vĩnh Hằng</span>
+            </motion.h1>
+
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.8, duration: 1 }}
+              className="w-20 h-px bg-[#b89b72] mb-6 origin-left"
+            />
+
+            <motion.p 
+              initial={{ opacity: 0, x: -15 }}
+              animate={{ opacity: 0.95, x: 0 }}
+              transition={{ delay: 1, duration: 1 }}
+              className="font-sans text-xs sm:text-sm text-stone-200 font-light tracking-wide max-w-lg leading-relaxed mb-10 drop-shadow"
+            >
+              Đón nhận long mạch linh thiêng từ non cao Yên Tử, Thiên Phúc dựng xây một cõi an lạc vĩnh cửu, hòa nhập tuyệt đối vào thiên nhiên tinh khôi và di sản gia tộc bất biến trường tồn.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 1 }}
+              className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+            >
+              <a 
+                href="#reservation"
+                className="px-8 py-3.5 bg-white text-[#1c1a19] text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-[#b89b72] hover:text-[#1c1a19] transition-luxury shadow-lg text-center"
+              >
+                Đặt lịch khảo sát riêng tư
+              </a>
+              <button 
+                onClick={() => setIsConciergeOpen(true)}
+                className="px-8 py-3.5 border border-white/40 bg-black/40 backdrop-blur-md text-white text-[10px] font-medium uppercase tracking-[0.25em] hover:bg-white/20 hover:border-white transition-luxury text-center"
+              >
+                Liên hệ Quản gia riêng
+              </button>
+            </motion.div>
+          </div>
         </div>
 
         {/* Elegant scroll down prompt */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-stone-400">
-          <span className="text-[8px] uppercase tracking-[0.4em]">Cuộn dọc</span>
+        <div className="absolute bottom-8 right-8 lg:right-16 z-10 flex flex-col items-center gap-2 text-stone-300 bg-black/40 backdrop-blur-sm px-3 py-2 rounded-full border border-white/10">
+          <span className="text-[8px] uppercase tracking-[0.3em]">Cuộn dọc</span>
           <ArrowDown className="w-3.5 h-3.5 animate-bounce text-[#b89b72]" />
         </div>
       </section>
@@ -504,18 +499,17 @@ export default function App() {
           </div>
 
           <div className="md:col-span-7 relative">
-            {/* Elegant luxury editorial photo collage */}
-            <div className="aspect-[4/3] bg-stone-100 overflow-hidden relative">
+            {/* Full color photo collage (Cho ảnh này có màu) */}
+            <div className="aspect-[4/3] bg-stone-100 overflow-hidden relative shadow-xl border border-[#eaeae1]">
               <img 
-                src={`${import.meta.env.BASE_URL}Images/choi_ngoi_ngam_canh.jpg`} 
-                alt="Zen luxury garden cemetery" 
-                className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-luxury"
+                src={`${import.meta.env.BASE_URL}Images/Photos/choi_ngoi_ngam_canh.jpg`} 
+                alt="Sự chu toàn thấu đáo của bậc trí giả" 
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-[#1c1a19]/5 mix-blend-color" />
             </div>
             
             {/* Overlay floating quote block */}
-            <div className="absolute -bottom-8 -left-6 md:-left-10 bg-[#f5f4ed] p-6 max-w-sm border border-[#eaeae1]">
+            <div className="absolute -bottom-8 -left-6 md:-left-10 bg-[#f5f4ed] p-6 max-w-sm border border-[#eaeae1] shadow-lg">
               <span className="font-serif text-3xl text-[#b89b72] block leading-none mb-2">&ldquo;</span>
               <p className="font-serif italic text-stone-700 text-sm leading-relaxed">
                 Tựa sơn vững chãi qua ngàn năm, hướng thủy hanh thông trọn kiếp người. Phúc đức tổ tiên lưu vạn thuở, hiếu nghĩa con cháu rạng muôn đời.
@@ -1573,13 +1567,14 @@ export default function App() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-stone-800">
           
           <div className="space-y-4">
-            <h4 className="font-serif text-xl tracking-[0.25em] uppercase font-light text-[#eaeae1]">
-              THIEN PHUC
-            </h4>
-            <span className="text-[9px] uppercase tracking-[0.3em] text-[#b89b72] font-semibold block">
-              Vĩnh Hằng Viên • Non Thiêng Yên Tử
-            </span>
-            <p className="text-xs text-stone-400 font-light leading-relaxed">
+            <a href="#" className="inline-block">
+              <img 
+                src={`${import.meta.env.BASE_URL}Images/Logo/TPVHV_horizontal.png`} 
+                alt="Thiên Phúc Vĩnh Hằng Viên Logo" 
+                className="h-12 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-luxury"
+              />
+            </a>
+            <p className="text-xs text-stone-400 font-light leading-relaxed mt-2">
               Kiến tạo di sản tâm linh đỉnh cao 5 sao, gìn giữ phúc trạch thiên niên vạn đại cho dòng họ.
             </p>
           </div>
