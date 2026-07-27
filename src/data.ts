@@ -52,7 +52,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     number: "03",
     title: "Vô Thường",
     english: "Impermanence",
-    description: "Nghỉ chân bên hiên Nhà Chùa Trọ cổ kính, ngẫm về dòng chảy không ngừng của thời gian và chuẩn bị chu toàn một di sản tâm linh trường tồn vạn thuở.",
+    description: "Nghỉ chân bên hiên Nhà để tro cổ kính, ngẫm về dòng chảy không ngừng của thời gian và chuẩn bị chu toàn một di sản tâm linh trường tồn vạn thuở.",
     quote: "Sinh tử tựa mây trôi; chuẩn bị chu toàn là đỉnh cao của sự an lòng.",
     imageUrl: img("nha_chua_tro.jpg")
   },
@@ -77,8 +77,8 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
   {
     id: "step6",
     number: "06",
-    title: "Từ Bi",
-    english: "Compassion",
+    title: "Tâm An",
+    english: "Serenity of Heart",
     description: "Thực hiện đại lễ tri ân tôn nghiêm tại Nhà Tang Lễ hoàng gia, bày tỏ lòng hiếu nghĩa vẹn tròn và gieo mầm phúc đức sâu dày cho muôn đời con cháu.",
     quote: "Phúc đức tổ tiên lưu vạn thuở; hiếu nghĩa con cháu rạng muôn đời.",
     imageUrl: img("nha_tang_le.jpg")
@@ -86,8 +86,8 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
   {
     id: "step7",
     number: "07",
-    title: "Giải Thoát",
-    english: "Liberation",
+    title: "Niết Bàn",
+    english: "Nirvana",
     description: "Tâm hồn nhẹ tênh như sương khói đại ngàn, rũ bỏ mọi vướng bận hồng trần, hòa mình hoàn toàn vào bức tranh sơn thủy vĩnh hằng.",
     quote: "Rũ sạch bụi trần, thong dong bước vào cõi vĩnh hằng vô ưu.",
     imageUrl: img("tong_quan_2.jpg")

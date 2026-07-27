@@ -522,7 +522,7 @@ export default function App() {
               <p className="font-serif italic text-stone-700 text-sm leading-relaxed">
                 Tựa sơn vững chãi qua ngàn năm, hướng thủy hanh thông trọn kiếp người. Phúc đức tổ tiên lưu vạn thuở, hiếu nghĩa con cháu rạng muôn đời.
               </p>
-              <span className="text-[9px] uppercase tracking-widest text-[#b89b72] font-semibold mt-4 block text-right">— BÀI CA GIA TỘC THIÊN PHÚC</span>
+              <span className="text-[9px] uppercase tracking-widest text-[#b89b72] font-semibold mt-4 block text-right">— THIÊN PHÚC - LINH MẠCH TỰA NÚI NON</span>
             </div>
           </div>
 
@@ -550,7 +550,7 @@ export default function App() {
               Bảy Bậc Giác Ngộ An Nhiên
             </h3>
             <p className="font-sans text-stone-500 font-light text-xs tracking-wider mt-2">
-              Bảy nấc thang khai sáng, rũ bỏ hồng trần, tìm về chốn vĩnh hằng tịch tịnh
+              Bảy nấc thang thiền định, rũ bỏ hồng trần, tìm về chốn vĩnh hằng tại tâm
             </p>
             <div className="w-12 h-px bg-[#b89b72] mt-4"></div>
           </div>
@@ -1122,7 +1122,7 @@ export default function App() {
           {/* Heritage Services Standard Description section */}
           <div className="mt-16 bg-[#faf9f6] border border-[#eaeae1] p-8 lg:p-12">
             <h4 className="font-serif text-2xl font-light text-[#1c1a19] tracking-wide mb-6 text-center">
-              Dịch Vụ Quản Gia Trọn Kiếp 5-Sao Cao Cấp
+              Dịch Vụ Quản Gia
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
               <div className="p-4">
