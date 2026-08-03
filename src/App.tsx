@@ -1,37 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { 
-  Compass, 
   MapPin, 
   Calendar, 
   ChevronRight, 
-  Info, 
-  Sparkles, 
   Phone, 
-  Shield, 
   Volume2, 
   VolumeX, 
   User, 
   Mail, 
   Check, 
   CheckCircle, 
-  Clock, 
-  ArrowRight, 
   Search, 
-  MessageSquare, 
   X, 
   ExternalLink,
   ChevronDown,
-  Layers,
-  Trees,
-  Gem,
-  Award,
   ArrowDown,
-  CornerDownRight,
-  Map,
-  FileText,
-  Sliders,
-  HelpCircle
+  MessageSquare
 } from "lucide-react";
 import { 
   ENLIGHTENMENT_STEPS, 
@@ -45,7 +30,6 @@ export default function App() {
   // Navigation & Interactive States
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);
   const [selectedShowcase, setSelectedShowcase] = useState<ShowcaseItem | null>(null);
-  const [activeTab, setActiveTab] = useState<"architecture" | "landscape" | "heritage">("architecture");
   const [faqCategory, setFaqCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [expandedFaqId, setExpandedFaqId] = useState<string | null>(null);
