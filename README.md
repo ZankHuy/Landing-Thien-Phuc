@@ -33,6 +33,9 @@ npm run build
 
 ## Deploy
 
-Site được deploy tự động qua GitHub Pages từ branch `roots`.
+Site được deploy tự động qua **GitHub Actions** từ branch `main`.
+
+1. GitHub Actions sẽ tự động chạy khi có push lên `main`
+2. Build output được upload lên GitHub Pages thông qua `deploy.yml` workflow
 
 **Live**: [https://zankhuy.github.io/Landing-Thien-Phuc/](https://zankhuy.github.io/Landing-Thien-Phuc/)
