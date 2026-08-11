@@ -1,28 +1,17 @@
 export const PROJECT_INFO = {
   name: "Thiên Phúc Vĩnh Hằng Viên",
   tagline: "Công Viên Nghĩa Trang Sinh Thái Chuẩn Mực – An Nghỉ Thanh Tịnh, Nhân Văn, Trường Tồn",
-  hotline: "0964.218.765",
-  hotlineRaw: "0964218765",
-  zaloPhone: "0964218765",
-  email: "Info@NghiaTrangThienPhuc.com",
+  hotline: "0911.561.369",
+  hotlineRaw: "0911561369",
+  zaloPhone: "0911561369",
   address: {
     project: "Đường Bãi Dài, Phường Uông Bí, Yên Tử, Quảng Ninh",
     coords: "21.0606617, 106.7481965"
   },
   offices: [
     {
-      city: "Quảng Ninh",
-      address: "Đường Bãi Dài, Phường Uông Bí, Yên Tử, Quảng Ninh",
-      label: "Văn phòng chính"
-    },
-    {
-      city: "Hồ Chí Minh",
-      address: "52-54-56 Đường B2, Phường An Khánh, TP. HCM",
-      label: "Văn phòng đại diện"
-    },
-    {
       city: "Hà Nội",
-      address: "96 Láng Hạ, Phường Đống Đa, TP. Hà Nội",
+      address: "Tầng 4 Toà nhà Diamond Flower Tower, 48 Lê Văn Lương, P. Nhân Chính, Q. Thanh Xuân, TP. Hà Nội",
       label: "Văn phòng đại diện"
     }
   ],

@@ -208,17 +208,14 @@ export default function LocationPage() {
         >
           <div className="text-center mb-12">
             <span className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold block mb-3">
-              HỆ THỐNG VĂN PHÒNG
+              VĂN PHÒNG ĐẠI DIỆN
             </span>
             <h3 className="font-serif text-3xl md:text-4xl font-light text-[#1c1a19] tracking-wide">
-              3 Văn Phòng Đại Diện
+              Văn Phòng Đại Diện Tại Hà Nội
             </h3>
-            <p className="text-sm text-stone-500 font-light mt-3">
-              Sẵn sàng đón tiếp khách hàng tại 3 miền đất nước
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {PROJECT_INFO.offices.map((off, i) => (
               <div key={i} className="border border-[#eaeae1] bg-[#faf9f6] p-8 hover:border-[#b89b72] transition-luxury">
                 <div className="flex items-center justify-between mb-4">

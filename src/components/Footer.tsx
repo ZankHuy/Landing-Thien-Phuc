@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { PROJECT_INFO, NAV_ITEMS } from "../constants";
 
 export function Footer() {
@@ -39,7 +39,7 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Offices */}
+        {/* Office */}
         <div>
           <h5 className="text-sm uppercase tracking-widest text-[#b89b72] font-semibold mb-4">VĂN PHÒNG ĐẠI DIỆN</h5>
           <ul className="text-xs text-stone-400 font-light space-y-3 leading-relaxed">
@@ -65,15 +65,6 @@ export function Footer() {
                 <span className="text-white/80 font-medium block text-sm uppercase tracking-wider">Hotline</span>
                 <a href={`tel:${PROJECT_INFO.hotlineRaw}`} className="text-base text-white font-serif font-medium hover:text-[#b89b72] transition-colors">
                   {PROJECT_INFO.hotline}
-                </a>
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Mail className="w-3 h-3 text-[#b89b72] mt-1 shrink-0" />
-              <span>
-                <span className="text-white/80 font-medium block text-sm uppercase tracking-wider">Email</span>
-                <a href={`mailto:${PROJECT_INFO.email}`} className="text-sm text-stone-400 hover:text-[#b89b72] transition-colors">
-                  {PROJECT_INFO.email}
                 </a>
               </span>
             </li>
