@@ -156,24 +156,176 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "faq1",
     category: "legal",
     question: "Pháp lý dự án có được sở hữu lâu dài không?",
-    answer: "Đầy đủ 100% pháp lý minh bạch. Dự án Thiên Phúc Vĩnh Hằng Viên được cấp sổ hồng sở hữu lâu dài ổn định, không lo ngại quy hoạch hay di dời, mang lại sự an tâm tuyệt đối cho nhiều thế hệ mai sau."
+    answer: "Đầy đủ 100% pháp lý minh bạch. Dự án Thiên Phúc Vĩnh Hằng Viên được cấp giấy chứng nhận quyền sử dụng lâu dài do Ban Quản lý hoa viên cấp, đảm bảo tính pháp lý và an tâm tuyệt đối cho nhiều thế hệ mai sau, không lo ngại quy hoạch hay di dời."
   },
   {
     id: "faq2",
     category: "fengshui",
     question: "Vì sao thế đất tại đây được gọi là 'Tựa Sơn Hướng Thủy'?",
-    answer: "Dự án nằm tựa lưng vững chãi vào dải núi Kim Cương kì vĩ - một nhánh rồng thiêng của rặng núi Phật giáo Yên Tử cổ kính, và hướng tầm mắt ra hồ nước tĩnh tại xanh biếc. Đây là thế tụ khí tụ tài đại cát đại lợi trong phong thủy."
+    answer: "Dự án nằm tựa lưng vững chãi vào dãy núi Yên Tử - một nhánh rồng thiêng của rặng núi Phật giáo cổ kính, và hướng tầm mắt ra hồ điều hòa thanh bình. Đây là thế tụ khí tụ tài đại cát đại lợi trong phong thủy âm trạch."
   },
   {
     id: "faq3",
     category: "technology",
-    question: "Công nghệ môi trường châu Âu áp dụng như thế nào?",
+    question: "Công nghệ môi trường sinh học áp dụng như thế nào?",
     answer: "Chúng tôi áp dụng hệ thống xử lý nước và đất sinh thái khép kín sinh học tiên tiến nhất, kết hợp hệ thống lọc vi sinh tự nhiên đảm bảo 100% không phát thải gây ảnh hưởng đến mạch nước ngầm và môi trường đại ngàn xung quanh."
   },
   {
     id: "faq4",
     category: "services",
     question: "Dự án có các dịch vụ chăm sóc định kỳ như thế nào?",
-    answer: "Dịch vụ chuẩn 5 sao bao gồm: chăm sóc cây cỏ, thắp hương ngày rằm, mùng một và các dịp lễ tết, quét dọn vệ sinh lau chùi mộ phần hàng ngày, bảo an 24/7, và hỗ trợ cúng giỗ online vô cùng tiện lợi cho con cháu ở xa."
+    answer: "Dịch vụ trông nom – hương khói trọn đời bao gồm: cúng lễ định kỳ, chăm sóc cây xanh, vệ sinh và bảo dưỡng mộ phần, thắp hương ngày rằm, mùng một và các dịp lễ tết, bảo an 24/7. Gia đình hoàn toàn yên tâm khi không thường xuyên ghé thăm."
+  },
+  {
+    id: "faq5",
+    category: "legal",
+    question: "Thủ tục mua mộ phần có phức tạp không?",
+    answer: "Rất đơn giản. Chỉ cần CMND/CCCD, giấy đăng ký thông tin người sở hữu và ký hợp đồng. Nhân viên tư vấn sẽ hỗ trợ khách hàng từ A-Z một cách nhanh chóng và bảo mật."
+  },
+  {
+    id: "faq6",
+    category: "legal",
+    question: "Có chính sách trả góp / thanh toán linh hoạt không?",
+    answer: "Có. Khách hàng có thể chọn hình thức thanh toán một lần hoặc chia thành nhiều đợt theo tiến độ. Thiên Phúc Vĩnh Hằng Viên cũng hỗ trợ các phương án tài chính phù hợp với gia đình."
+  },
+  {
+    id: "faq7",
+    category: "services",
+    question: "Giá mộ phần hiện nay khoảng bao nhiêu?",
+    answer: "Mức giá mộ phần tại Thiên Phúc Vĩnh Hằng Viên phụ thuộc vào loại hình (mộ đơn, mộ đôi, mộ gia tộc, mộ đặc biệt). Vui lòng liên hệ Hotline để được báo giá và chính sách ưu đãi mới nhất."
+  },
+  {
+    id: "faq8",
+    category: "fengshui",
+    question: "Từ Hà Nội / Hải Phòng / Hạ Long đi dự án mất bao lâu?",
+    answer: "Từ Hà Nội khoảng 2 giờ xe, từ Hải Phòng khoảng 1 giờ xe, từ Hạ Long khoảng 30-50 phút xe. Ban quản lý cung cấp dịch vụ xe Limousine đưa đón miễn phí cho gia đình tham quan khảo sát."
+  }
+];
+
+// ============================================================
+// PROJECT OVERVIEW DATA
+// ============================================================
+
+export interface OverviewPillar {
+  title: string;
+  desc: string;
+}
+
+export interface ProjectOverview {
+  headline: string;
+  intro: string;
+  pillars: OverviewPillar[];
+  mission: string[];
+}
+
+export const PROJECT_OVERVIEW: ProjectOverview = {
+  headline: "Công Viên Nghĩa Trang Văn Minh – Sinh Thái Chuẩn Mực",
+  intro: "Thiên Phúc Vĩnh Hằng Viên được quy hoạch như một hoa viên nghĩa trang sinh thái chuẩn mực, gắn liền với triết lý Thiền phái Trúc Lâm. Đây không chỉ là nơi an nghỉ vĩnh hằng cho người đã khuất, mà còn là biểu tượng nhân văn, giúp con cháu thể hiện đạo hiếu và giữ gìn phúc đức lâu dài.",
+  pillars: [
+    {
+      title: "Tâm Linh & Văn Hóa",
+      desc: "Tọa lạc dưới chân núi Yên Tử – đất Phật linh thiêng, gắn với lịch sử dựng nước và phát triển Thiền phái Trúc Lâm Yên Tử. Gìn giữ giá trị tâm linh, lịch sử – văn hóa ngàn năm."
+    },
+    {
+      title: "Quy Hoạch Sinh Thái",
+      desc: "Thiên nhiên với kiến trúc nơi đây như hòa quyện làm một, tạo cho Yên Tử một vẻ đẹp cổ kính mang đậm màu sắc thời gian và một 'Hồn Việt – Nét Trần – Tinh thần thiền Trúc Lâm'."
+    },
+    {
+      title: "Dịch Vụ Trọn Đời",
+      desc: "Đem đến dịch vụ trọn đời, an tâm tuyệt đối cho thân nhân với chuẩn mực resort 5 sao, đội ngũ quản gia chuyên nghiệp, công nghệ bảo mật hiện đại."
+    }
+  ],
+  mission: [
+    "Tạo dựng một hoa viên nghĩa trang văn minh, hài hòa với thiên nhiên.",
+    "Gìn giữ giá trị tâm linh, gắn với lịch sử – văn hóa Yên Tử.",
+    "Đem đến dịch vụ trọn đời, an tâm tuyệt đối cho thân nhân."
+  ]
+};
+
+// ============================================================
+// SERVICES DATA (for /dich-vu page)
+// ============================================================
+
+export const SERVICES = [
+  {
+    id: "care",
+    icon: "🪴",
+    title: "Dịch Vụ Trông Nom Hương Khói Trọn Đời",
+    english: "Perpetual Care Service",
+    desc: "Đội ngũ quản gia túc trực chăm sóc mộ phần: cúng lễ, thắp hương định kỳ, chăm sóc cây xanh, vệ sinh lau chùi mỗi ngày. Gia đình hoàn toàn yên tâm dù ở xa.",
+    features: [
+      "Thắp hương ngày rằm, mùng một, sóc vọng",
+      "Chăm sóc cây xanh, thảm cỏ Nhật Bản",
+      "Quét dọn vệ sinh, lau chùi mộ phần",
+      "Báo cáo hình ảnh qua ứng dụng mobile",
+      "Cúng giỗ online cho con cháu phương xa"
+    ]
+  },
+  {
+    id: "funeral",
+    icon: "🕯️",
+    title: "Dịch Vụ Tang Lễ Trọn Gói",
+    english: "Full-Service Funeral",
+    desc: "Hỗ trợ toàn bộ quy trình tang lễ tại Nhà Tang Lễ hoàng gia trong khuôn viên dự án. Đội ngũ chuyên nghiệp đồng hành cùng gia đình trong giờ phút thiêng liêng.",
+    features: [
+      "Nhà Tang Lễ đầy đủ tiện nghi chuẩn 5 sao",
+      "Hỗ trợ thủ tục pháp lý, giấy tờ",
+      "Trang trí hoa tươi, ánh sáng tôn nghiêm",
+      "Phòng chờ riêng cho thân nhân",
+      "Bố trí xe đưa đón tang gia"
+    ]
+  },
+  {
+    id: "cremation",
+    icon: "🔥",
+    title: "Dịch Vụ Hỏa Táng & Lưu Tro",
+    english: "Cremation & Ash Storage",
+    desc: "Lò hỏa táng hiện đại đặt tại khuôn viên, quy trình tôn nghiêm theo đúng nghi thức truyền thống. Nhà để tro cốt được bảo quản vĩnh viễn trong không gian thanh tịnh.",
+    features: [
+      "Lò hỏa táng công nghệ tiên tiến, không khói",
+      "Nhà để tro riêng biệt, bảo quản mãi mãi",
+      "Bình tro cốt cao cấp nhiều lựa chọn",
+      "Phòng chiêu hồn trang nghiêm"
+    ]
+  },
+  {
+    id: "cung",
+    icon: "🍵",
+    title: "Dịch Vụ Mâm Cúng",
+    english: "Votive Offering Service",
+    desc: "Chuẩn bị mâm cúng trọn gói theo phong tục Việt Nam cho các ngày giỗ, lễ tết, sóc vọng, kỵ nhật. Đầu bếp chay chuyên nghiệp, nguyên liệu thượng hạng.",
+    features: [
+      "Mâm cúng chay truyền thống",
+      "Mâm cúng mặn theo yêu cầu",
+      "Hoa quả tươi theo mùa",
+      "Đầu bếp chay được chứng nhận",
+      "Bày biện tại Nhà Hàng Thủy Tạ hoặc tại mộ"
+    ]
+  },
+  {
+    id: "fengshui",
+    icon: "🧭",
+    title: "Tư Vấn Phong Thủy Chuyên Sâu",
+    english: "Feng Shui Consultation",
+    desc: "Chuyên gia phong thủy Á Đông tư vấn vị trí, hướng mộ phần và ngày giờ an táng phù hợp với tuổi, mệnh gia chủ. Cam kết hài hòa long mạch dự án.",
+    features: [
+      "Xem tuổi, mệnh gia chủ",
+      "Tư vấn hướng mộ theo bát trạch",
+      "Chọn ngày giờ an táng tốt nhất",
+      "Báo cáo phong thủy chi tiết kèm file"
+    ]
+  },
+  {
+    id: "transport",
+    icon: "🚗",
+    title: "Dịch Vụ Limousine Đưa Đón VIP",
+    english: "VIP Limousine Transport",
+    desc: "Xe Limousine/Mercedes hạng sang đưa đón miễn phí từ Hà Nội, Hải Phòng, Hạ Long và các tỉnh lân cận. Phục vụ gia đình tham quan khảo sát thực tế.",
+    features: [
+      "Limousine 9 chỗ cao cấp",
+      "Tài xế chuyên nghiệp, lịch sự",
+      "Miễn phí đưa đón tận nơi",
+      "Có thể đón tại 3 văn phòng: HN, HP, HCM"
+    ]
   }
 ];

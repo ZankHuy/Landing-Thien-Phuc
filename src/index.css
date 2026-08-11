@@ -3,7 +3,7 @@
 @theme {
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
-  
+
   --color-vinhhang-charcoal: #1c1a19;
   --color-vinhhang-warm-stone: #eaeae1;
   --color-vinhhang-sand: #f5f4ed;
@@ -20,6 +20,26 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+  font-weight: 450;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* Tăng độ dày + line-height + letter-spacing cho dễ đọc */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+p, li, span, div, label, a {
+  font-weight: 450;
+  line-height: 1.9;
+  letter-spacing: 0.015em;
+}
+
+strong, b {
+  font-weight: 600;
 }
 
 /* Custom scrollbar matching luxury aesthetic */
