@@ -348,14 +348,12 @@ export default function ContactPage() {
             <div className="border border-[#eaeae1] p-8">
               <h4 className="font-serif text-xl text-[#1c1a19] mb-4">Văn Phòng Đại Diện</h4>
               <ul className="space-y-4 text-sm font-light">
-                {[
-                  { city: "Hà Nội", addr: PROJECT_INFO.address.hanoi }
-                ].map((o, i) => (
+                {PROJECT_INFO.offices.map((o, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#b89b72] mt-2 shrink-0" />
                     <div>
                       <span className="block font-medium text-[#1c1a19] text-xs uppercase tracking-wider mb-0.5">{o.city}</span>
-                      <span className="text-stone-600">{o.addr}</span>
+                      <span className="text-stone-600">{o.address}</span>
                     </div>
                   </li>
                 ))}

@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { Check, Phone, ChevronRight } from "lucide-react";
 import { PROJECT_INFO, PRICE_TABLE } from "../constants";
 
+type TabFilter = "all" | "don" | "doi" | "giatoc" | "daigiatoc";
+
 export default function ProductsPage() {
-  const [activeTab, setActiveTab] = useState<"all" | "single" | "family" | "bespoke">("all");
+  const [activeTab, setActiveTab] = useState<TabFilter>("all");
+
+  const filteredProducts = PRICE_TABLE.filter((p) => {
+    if (activeTab === "all") return true;
+    if (activeTab === "don") return p.code === "DON";
+    if (activeTab === "doi") return p.code === "DOI";
+    if (activeTab === "giatoc") return p.code === "GIATOC";
+    if (activeTab === "daigiatoc") return p.code === "DAIGIATOC";
+    return true;
+  });
 
   return (
     <>
@@ -43,18 +54,19 @@ export default function ProductsPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
           <div className="flex flex-wrap justify-center gap-2 mb-16">
             {[
-              { id: "all", label: "Tất cả sản phẩm" },
-              { id: "bespoke", label: "Mộ Đơn / Đôi" },
-              { id: "single", label: "Mộ Gia Đình" },
-              { id: "family", label: "Khuôn Viên Đại Gia Tộc" }
+              { id: "all" as TabFilter, label: "Tất cả sản phẩm" },
+              { id: "don" as TabFilter, label: "Mộ Đơn" },
+              { id: "doi" as TabFilter, label: "Mộ Đôi" },
+              { id: "giatoc" as TabFilter, label: "Mộ Gia Tộc" },
+              { id: "daigiatoc" as TabFilter, label: "Mộ Đại Gia Tộc" }
             ].map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id)}
                 className={`px-5 py-2.5 text-xs tracking-widest uppercase transition-luxury font-medium border ${
                   activeTab === tab.id
                     ? "bg-[#1c1a19] text-white border-[#1c1a19]"
@@ -66,76 +78,70 @@ export default function ProductsPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {PRICE_TABLE.filter((p) => {
-              if (activeTab === "all") return true;
-              if (activeTab === "bespoke") return p.code === "ANLAC";
-              if (activeTab === "single") return p.code === "GIADINH";
-              if (activeTab === "family") return p.code === "VUDONG";
-              return true;
-            }).map((p) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {filteredProducts.map((p) => (
               <div
                 key={p.code}
-                className={`group border p-6 flex flex-col justify-between transition-luxury shadow-sm hover:shadow-md ${
+                className={`group border p-5 flex flex-col justify-between transition-luxury shadow-sm hover:shadow-md ${
                   p.featured
                     ? "border-[#b89b72]/40 bg-white relative hover:border-[#b89b72]"
                     : "border-[#eaeae1] bg-[#faf9f6] hover:border-[#b89b72]"
                 }`}
               >
                 {p.featured && (
-                  <span className="absolute -top-3.5 right-6 bg-[#b89b72] text-white text-xs tracking-[0.2em] font-bold uppercase py-1 px-3 z-10 shadow-sm">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#b89b72] text-white text-xs tracking-[0.2em] font-bold uppercase py-1 px-3 z-10 shadow-sm">
                     ƯU TIÊN LỰA CHỌN
                   </span>
                 )}
                 <div>
-                  <div className="aspect-[16/10] overflow-hidden mb-5 bg-stone-200 border border-[#eaeae1] relative">
+                  <div className="aspect-[4/3] overflow-hidden mb-4 bg-stone-200 border border-[#eaeae1] relative">
                     <img
                       src={`${import.meta.env.BASE_URL}Images/Photos/${p.image}`}
                       alt={p.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <span className="absolute top-3 left-3 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-xs tracking-[0.2em] font-bold uppercase py-1 px-2.5">
+                    <span className="absolute top-2 left-2 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[10px] tracking-[0.15em] font-bold uppercase py-1 px-2">
                       {p.ratio}
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs font-mono tracking-widest text-[#b89b72] uppercase font-bold">
-                      {p.code} COLLECTION
+                    <span className="text-[10px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">
+                      {p.code}
                     </span>
                   </div>
-                  <h4 className="font-serif text-2xl font-light text-[#1c1a19] tracking-wide mb-2">{p.name}</h4>
-                  <div className="w-8 h-px bg-[#b89b72] my-3"></div>
+                  <h4 className="font-serif text-xl font-light text-[#1c1a19] tracking-wide mb-2">{p.name}</h4>
+                  <div className="w-6 h-px bg-[#b89b72] my-3"></div>
                   <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
                     <div>
-                      <span className="text-stone-400 block text-xs uppercase tracking-widest">Diện tích</span>
+                      <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Diện tích</span>
                       <span className="text-[#1c1a19] font-serif font-medium">{p.area}</span>
                     </div>
                     <div>
-                      <span className="text-stone-400 block text-xs uppercase tracking-widest">Số lượng</span>
+                      <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Số lượng</span>
                       <span className="text-[#1c1a19] font-serif font-medium">{p.quantity}</span>
                     </div>
                   </div>
-                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-5">{p.desc}</p>
-                  <ul className="text-xs text-stone-600 flex flex-col gap-2">
+                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-4">{p.desc}</p>
+                  <ul className="text-xs text-stone-600 flex flex-col gap-1.5">
                     {p.features.map((f, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-[#b89b72] shrink-0" /> {f}
+                      <li key={idx} className="flex items-start gap-2">
+                        <Check className="w-3 h-3 text-[#b89b72] shrink-0 mt-0.5" /> {f}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mt-6 pt-5 border-t border-[#eaeae1] flex justify-between items-center">
-                  <span className="text-sm uppercase tracking-widest text-stone-400 font-mono">BÀN GIAO VĨNH VIỄN</span>
+                <div className="mt-5 pt-4 border-t border-[#eaeae1] flex justify-between items-center">
+                  <span className="text-[10px] uppercase tracking-widest text-stone-400 font-mono">BÀN GIAO VĨNH VIỄN</span>
                   <Link
                     to="/lien-he"
-                    className={`text-xs font-semibold uppercase tracking-widest transition-colors ${
+                    className={`text-[11px] font-semibold uppercase tracking-widest transition-colors ${
                       p.featured
                         ? "text-[#b89b72] hover:text-[#1c1a19]"
                         : "text-[#1c1a19] hover:text-[#b89b72]"
                     }`}
                   >
-                    Đăng ký ngay →
+                    Đăng ký →
                   </Link>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { MapPin, Plane, Train, Car, Phone, Clock, ChevronRight } from "lucide-react";
+import { MapPin, Phone, Clock, ChevronRight } from "lucide-react";
 import { PROJECT_INFO } from "../constants";
 
 export default function LocationPage() {
@@ -218,21 +218,19 @@ export default function LocationPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {[
-              { city: "Hà Nội", addr: PROJECT_INFO.address.hanoi, note: "Văn phòng đại diện" }
-            ].map((off, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {PROJECT_INFO.offices.map((off, i) => (
               <div key={i} className="border border-[#eaeae1] bg-[#faf9f6] p-8 hover:border-[#b89b72] transition-luxury">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="font-serif text-xl text-[#1c1a19]">{off.city}</h4>
                   <span className="text-xs uppercase tracking-widest text-[#b89b72] font-bold bg-[#b89b72]/10 px-2 py-1">
-                    {off.note}
+                    {off.label}
                   </span>
                 </div>
                 <div className="w-8 h-px bg-[#b89b72] mb-4"></div>
                 <p className="text-sm text-stone-600 font-light leading-relaxed flex items-start gap-2">
                   <MapPin className="w-4 h-4 text-[#b89b72] mt-0.5 shrink-0" />
-                  {off.addr}
+                  {off.address}
                 </p>
               </div>
             ))}
