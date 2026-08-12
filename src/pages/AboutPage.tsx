@@ -68,7 +68,8 @@ export default function AboutPage() {
                 VỀ CHÚNG TÔI
               </span>
               <h2 className="font-serif text-3xl md:text-4xl text-[#1c1a19] font-light tracking-wide leading-tight mb-6">
-                Di Sản Tâm Linh Trường Tồn – Gìn Giữ Phúc Trạch Muôn Đời
+                Di Sản Tâm Linh Trường Tồn<br />
+                Gìn Giữ Phúc Trạch Muôn Đời
               </h2>
               <div className="w-10 h-px bg-[#b89b72] mb-6"></div>
               <p className="font-sans text-stone-700 font-light text-base leading-relaxed mb-4">
