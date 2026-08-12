@@ -13,7 +13,8 @@ export const PROJECT_INFO = {
     {
       city: "Hà Nội",
       address: "Tầng 4 Toà nhà Diamond Flower Tower, 48 Lê Văn Lương, P. Nhân Chính, Q. Thanh Xuân, TP. Hà Nội",
-      label: "Văn phòng đại diện"
+      label: "Văn phòng đại diện",
+      coords: "20.9931,105.8011"
     }
   ],
   investor: "Công Ty Cổ Phần Long Hải Quảng Ninh",

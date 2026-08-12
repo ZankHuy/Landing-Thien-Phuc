@@ -351,17 +351,31 @@ export default function ContactPage() {
 
             <div className="border border-[#eaeae1] p-8">
               <h4 className="font-serif text-xl text-[#1c1a19] mb-4">Văn Phòng Đại Diện</h4>
-              <ul className="space-y-4 text-sm font-light">
-                {PROJECT_INFO.offices.map((o, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#b89b72] mt-2 shrink-0" />
-                    <div>
-                      <span className="block font-medium text-[#1c1a19] text-xs uppercase tracking-wider mb-0.5">{o.city}</span>
-                      <span className="text-stone-600">{o.address}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <div className="grid md:grid-cols-2 gap-6">
+                <ul className="space-y-4 text-sm font-light">
+                  {PROJECT_INFO.offices.map((o, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#b89b72] mt-2 shrink-0" />
+                      <div>
+                        <span className="block font-medium text-[#1c1a19] text-xs uppercase tracking-wider mb-0.5">{o.city}</span>
+                        <span className="text-stone-600">{o.address}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+                {PROJECT_INFO.offices[0]?.coords && (
+                  <div className="rounded-md overflow-hidden h-48 md:h-auto">
+                    <iframe
+                      src={`https://maps.google.com/maps?q=${PROJECT_INFO.offices[0].coords}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                      className="w-full h-full border-0"
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Bản đồ Văn phòng Hà Nội"
+                    ></iframe>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </motion.div>
