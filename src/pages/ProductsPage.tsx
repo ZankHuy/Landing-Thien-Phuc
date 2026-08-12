@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { Check, Phone, ChevronRight } from "lucide-react";
 import { PROJECT_INFO, PRICE_TABLE } from "../constants";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 type TabFilter = "all" | "don" | "doi" | "giatoc" | "daigiatoc";
 
@@ -93,44 +94,42 @@ export default function ProductsPage() {
                     ƯU TIÊN LỰA CHỌN
                   </span>
                 )}
-                <div>
-                  <div className="aspect-[4/3] overflow-hidden mb-4 bg-stone-200 border border-[#eaeae1] relative">
-                    <img
-                      src={`${import.meta.env.BASE_URL}Images/Photos/${p.image}`}
-                      alt={p.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <span className="absolute top-2 left-2 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[10px] tracking-[0.15em] font-bold uppercase py-1 px-2">
-                      {p.ratio}
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-[10px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">
-                      {p.code}
-                    </span>
-                  </div>
-                  <h4 className="font-serif text-xl font-light text-[#1c1a19] tracking-wide mb-2">{p.name}</h4>
-                  <div className="w-6 h-px bg-[#b89b72] my-3"></div>
-                  <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
-                    <div>
-                      <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Diện tích</span>
-                      <span className="text-[#1c1a19] font-serif font-medium">{p.area}</span>
-                    </div>
-                    <div>
-                      <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Số lượng</span>
-                      <span className="text-[#1c1a19] font-serif font-medium">{p.quantity}</span>
-                    </div>
-                  </div>
-                  <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-4">{p.desc}</p>
-                  <ul className="text-xs text-stone-600 flex flex-col gap-1.5">
-                    {p.features.map((f, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <Check className="w-3 h-3 text-[#b89b72] shrink-0 mt-0.5" /> {f}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="relative">
+                  <OptimizedImage
+                    src={`${import.meta.env.BASE_URL}Images/Photos/${p.image}`}
+                    alt={p.name}
+                    className="mb-4 border border-[#eaeae1]"
+                    aspectRatio="4/3"
+                  />
+                  <span className="absolute top-2 left-2 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[10px] tracking-[0.15em] font-bold uppercase py-1 px-2">
+                    {p.ratio}
+                  </span>
                 </div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-[10px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">
+                    {p.code}
+                  </span>
+                </div>
+                <h4 className="font-serif text-xl font-light text-[#1c1a19] tracking-wide mb-2">{p.name}</h4>
+                <div className="w-6 h-px bg-[#b89b72] my-3"></div>
+                <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
+                  <div>
+                    <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Diện tích</span>
+                    <span className="text-[#1c1a19] font-serif font-medium">{p.area}</span>
+                  </div>
+                  <div>
+                    <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Số lượng</span>
+                    <span className="text-[#1c1a19] font-serif font-medium">{p.quantity}</span>
+                  </div>
+                </div>
+                <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-4">{p.desc}</p>
+                <ul className="text-xs text-stone-600 flex flex-col gap-1.5">
+                  {p.features.map((f, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <Check className="w-3 h-3 text-[#b89b72] shrink-0 mt-0.5" /> {f}
+                    </li>
+                  ))}
+                </ul>
                 <div className="mt-5 pt-4 border-t border-[#eaeae1] flex justify-between items-center">
                   <span className="text-[10px] uppercase tracking-widest text-stone-400 font-mono">BÀN GIAO VĨNH VIỄN</span>
                   <Link

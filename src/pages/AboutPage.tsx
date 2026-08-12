@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Award, Leaf, Heart, Compass, Building2, Users } from "lucide-react";
 import { PROJECT_INFO } from "../constants";
 import { PROJECT_OVERVIEW } from "../data";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 export default function AboutPage() {
   const [showAll, setShowAll] = React.useState(false);
@@ -81,13 +82,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="lg:col-span-5">
-              <div className="aspect-[3/4] overflow-hidden border border-[#eaeae1] shadow-xl">
-                <img
-                  src={`${import.meta.env.BASE_URL}Images/Photos/cong.jpg`}
-                  alt="Cổng tam quan Thiên Phúc"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <OptimizedImage
+              src={`${import.meta.env.BASE_URL}Images/Photos/cong.jpg`}
+              alt="Cổng tam quan Thiên Phúc"
+              className="w-full h-full border border-[#eaeae1] shadow-xl"
+              aspectRatio="3/4"
+            />
             </div>
           </div>
 

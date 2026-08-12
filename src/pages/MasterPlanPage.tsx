@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Compass, Building, Waves, Utensils, Car, Heart, ChevronRight, Trees, Map } from "lucide-react";
 import { SHOWCASE_ITEMS } from "../data";
 import { PROJECT_INFO, FACILITIES, STATS } from "../constants";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const ICON_MAP: Record<string, React.ComponentType<any>> = {
   Temple: Compass,
@@ -75,13 +76,12 @@ export default function MasterPlanPage() {
             </h2>
           </div>
 
-          <div className="aspect-[16/9] overflow-hidden border border-[#eaeae1] shadow-xl">
-            <img
-              src={`${import.meta.env.BASE_URL}Images/Photos/tong_quan_2.jpg`}
-              alt="Bản đồ quy hoạch tổng thể"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <OptimizedImage
+            src={`${import.meta.env.BASE_URL}Images/Photos/tong_quan_2.jpg`}
+            alt="Bản đồ quy hoạch tổng thể"
+            className="w-full h-full"
+            aspectRatio="16/9"
+          />
           <p className="text-center text-xs text-stone-500 italic mt-4">
             Phối cảnh tổng thể dự án Thiên Phúc Vĩnh Hằng Viên (góc nhìn từ đại ngàn Yên Tử)
           </p>

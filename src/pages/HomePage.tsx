@@ -28,6 +28,7 @@ import {
 import { PROJECT_INFO, STATS, FACILITIES } from "../constants";
 import type { ShowcaseItem, EnlightenmentStep } from "../data";
 import { Link } from "react-router-dom";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const ICON_MAP: Record<string, React.ComponentType<any>> = {
   Temple: Compass,
@@ -217,15 +218,12 @@ export default function HomePage() {
                 Tìm hiểu chi tiết dự án <ChevronRight className="w-3 h-3" />
               </Link>
             </div>
-            <div className="lg:col-span-7">
-              <div className="aspect-[4/3] bg-stone-100 overflow-hidden shadow-xl border border-[#eaeae1]">
-                <img
-                  src={`${import.meta.env.BASE_URL}Images/Photos/tong_quan_2.jpg`}
-                  alt="Tổng quan Thiên Phúc Vĩnh Hằng Viên"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            <OptimizedImage
+              src={`${import.meta.env.BASE_URL}Images/Photos/tong_quan_2.jpg`}
+              alt="Tổng quan Thiên Phúc Vĩnh Hằng Viên"
+              className="shadow-xl border border-[#eaeae1]"
+              aspectRatio="4/3"
+            />
           </div>
 
           {/* Stats grid */}

@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Clock, ChevronRight } from "lucide-react";
 import { PROJECT_INFO } from "../constants";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 export default function LocationPage() {
   return (
@@ -152,13 +153,12 @@ export default function LocationPage() {
           className="max-w-5xl mx-auto"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-[4/3] overflow-hidden border border-[#eaeae1]">
-              <img
-                src={`${import.meta.env.BASE_URL}Images/Photos/choi_ngoi_ngam_canh.jpg`}
-                alt="Long mạch Yên Tử"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <OptimizedImage
+              src={`${import.meta.env.BASE_URL}Images/Photos/choi_ngoi_ngam_canh.jpg`}
+              alt="Long mạch Yên Tử"
+              className="w-full h-full border border-[#eaeae1]"
+              aspectRatio="4/3"
+            />
 
             <div>
               <span className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold block mb-3">
