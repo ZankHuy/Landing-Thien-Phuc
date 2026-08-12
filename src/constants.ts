@@ -41,7 +41,7 @@ export const PRICE_TABLE = [
   {
     code: "DON",
     name: "Mộ Đơn",
-    image: "9.jpg",
+    image: "Mo_Don.JPG",
     area: "4.8 m²",
     quantity: "7.763 mộ",
     ratio: "Tỷ lệ ~30% dự án",
@@ -51,7 +51,7 @@ export const PRICE_TABLE = [
   {
     code: "DOI",
     name: "Mộ Đôi",
-    image: "9.jpg",
+    image: "Mo_Doi.JPG",
     area: "9.6 m²",
     quantity: "7.763 mộ",
     ratio: "Tỷ lệ ~30% dự án",
