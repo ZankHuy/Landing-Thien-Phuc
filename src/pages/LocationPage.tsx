@@ -218,9 +218,9 @@ export default function LocationPage() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {PROJECT_INFO.offices.map((off, i) => (
-              <div key={i} className="border border-[#eaeae1] bg-[#faf9f6] p-8 hover:border-[#b89b72] transition-luxury text-center">
+              <div key={i} className="border border-[#eaeae1] bg-[#faf9f6] p-6 hover:border-[#b89b72] transition-luxury">
                 <div className="flex flex-col items-center mb-4">
                   <h4 className="font-serif text-2xl text-[#1c1a19] mb-3">{off.city}</h4>
                   <span className="text-xs uppercase tracking-widest text-[#b89b72] font-bold bg-[#b89b72]/10 px-3 py-1.5">
@@ -228,10 +228,20 @@ export default function LocationPage() {
                   </span>
                 </div>
                 <div className="w-12 h-px bg-[#b89b72] mx-auto mb-4"></div>
-                <p className="text-sm text-stone-600 font-light leading-relaxed flex items-center justify-center gap-2 text-center">
+                <p className="text-sm text-stone-600 font-light leading-relaxed flex items-center justify-center gap-2 text-center mb-4">
                   <MapPin className="w-4 h-4 text-[#b89b72] shrink-0" />
                   {off.address}
                 </p>
+                {off.coords && (
+                  <iframe
+                    src={`https://maps.google.com/maps?q=${off.coords}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                    className="w-full h-40 rounded-md border border-[#eaeae1]"
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Bản đồ ${off.city}`}
+                  ></iframe>
+                )}
               </div>
             ))}
           </div>
