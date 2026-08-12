@@ -5,7 +5,7 @@ export const PROJECT_INFO = {
   hotlineRaw: "0911561369",
   zaloPhone: "0911561369",
   address: {
-    project: "Đường Bãi Dài, Phường Uông Bí, Yên Tử, Quảng Ninh",
+    project: "Đường Bãi Dài, Phường Yên Tử, Quảng Ninh",
     coords: "21.0606617, 106.7481965"
   },
   offices: [
