@@ -135,7 +135,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 1.2 }}
-              className="font-serif text-4xl sm:text-6xl lg:text-6xl font-light text-white tracking-wide leading-[1.15] mb-6 drop-shadow-md"
+              className="font-serif text-5xl sm:text-7xl lg:text-8xl font-light text-white tracking-wide leading-[1.1] mb-6 drop-shadow-md"
             >
               Nơi Tâm Hồn An Trú<br />
               <span className="font-serif italic font-normal text-[#b89b72]">Trong Cõi Vĩnh Hằng</span>
