@@ -161,7 +161,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: "faq2",
     category: "fengshui",
-    question: "Vì sao thế đất tại đây được gọi là 'Tựa Sơn Hướng Thủy'?",
+    question: "Vì sao thế đất tại đây được gọi là 'Tựa Sơn – Hướng Thủy'?",
     answer: "Dự án nằm tựa lưng vững chãi vào dãy núi Yên Tử - một nhánh rồng thiêng của rặng núi Phật giáo cổ kính, và hướng tầm mắt ra hồ điều hòa thanh bình. Đây là thế tụ khí tụ tài đại cát đại lợi trong phong thủy âm trạch."
   },
   {

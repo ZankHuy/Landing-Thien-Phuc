@@ -44,7 +44,7 @@ export default function LocationPage() {
             transition={{ delay: 0.5 }}
             className="font-serif italic text-[#b89b72] text-lg sm:text-xl max-w-3xl mx-auto"
           >
-            Thế đất "Tựa Sơn – Hướng Thủy" – Tiếp nhận sinh khí từ đại ngàn Phật giáo
+            Thế Đất "Tựa Sơn – Hướng Thủy"
           </motion.p>
           <div className="w-16 h-px bg-[#b89b72] mx-auto mt-8"></div>
         </div>
@@ -167,7 +167,7 @@ export default function LocationPage() {
                 PHONG THỦY ĐẮC ĐỊA
               </span>
               <h3 className="font-serif text-3xl md:text-4xl text-[#1c1a19] font-light tracking-wide leading-tight mb-6">
-                Thế Đất "Tựa Sơn – Hướng Thủy"
+                Thế Đất "Tựa Sơn –<br className="sm:hidden" /> Hướng Thủy"
               </h3>
               <div className="w-10 h-px bg-[#b89b72] mb-6"></div>
               <p className="font-sans text-stone-700 font-light text-sm leading-relaxed mb-4">
