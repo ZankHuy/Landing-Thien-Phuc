@@ -218,12 +218,15 @@ export default function HomePage() {
                 Tìm hiểu chi tiết dự án <ChevronRight className="w-3 h-3" />
               </Link>
             </div>
-            <OptimizedImage
-              src={`${import.meta.env.BASE_URL}Images/Photos/tong_quan_2.jpg`}
-              alt="Tổng quan Thiên Phúc Vĩnh Hằng Viên"
-              className="shadow-xl border border-[#eaeae1]"
-              aspectRatio="4/3"
-            />
+            <div className="lg:col-span-7 overflow-hidden shadow-xl border border-[#eaeae1]">
+              <OptimizedImage
+                src={`${import.meta.env.BASE_URL}Images/Photos/tong_quan_2.jpg`}
+                alt="Tổng quan Thiên Phúc Vĩnh Hằng Viên"
+                className="w-full h-full"
+                aspectRatio="4/3"
+                thumbnail={`${import.meta.env.BASE_URL}Images/Thumbnails/tong_quan_2_thumb.jpg`}
+              />
+            </div>
           </div>
 
           {/* Stats grid */}

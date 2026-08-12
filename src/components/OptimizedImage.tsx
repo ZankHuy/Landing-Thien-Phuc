@@ -5,13 +5,14 @@ interface OptimizedImageProps {
   alt?: string;
   className?: string;
   aspectRatio?: string;
-  isBackground?: boolean;
+  thumbnail?: string;
 }
 
 /**
  * Optimized image with:
- * - Tiny placeholder while loading
- * - Native lazy loading (only loads when in viewport)
+ * - Thumbnail (small size) for display
+ * - Full-size image for lightbox
+ * - Native lazy loading
  * - Click to view full size in lightbox
  */
 export function OptimizedImage({
@@ -19,12 +20,16 @@ export function OptimizedImage({
   alt = "",
   className = "",
   aspectRatio = "4/3",
-  isBackground = false
+  thumbnail
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showLightbox, setShowLightbox] = useState(false);
   const [isInView, setIsInView] = useState(false);
+  const [isHighResLoaded, setIsHighResLoaded] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
+
+  // Use thumbnail for display, full image for lightbox
+  const displaySrc = thumbnail || src;
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -45,18 +50,14 @@ export function OptimizedImage({
     return () => observer.disconnect();
   }, []);
 
-  if (isBackground) {
-    return (
-      <div
-        ref={imgRef}
-        className={`bg-cover bg-center ${className}`}
-        style={{
-          backgroundImage: isInView ? `url('${src}')` : undefined,
-          backgroundColor: "#e7e5e4"
-        }}
-      />
-    );
-  }
+  // Preload high-res image when in view
+  useEffect(() => {
+    if (isInView && thumbnail && src !== thumbnail) {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => setIsHighResLoaded(true);
+    }
+  }, [isInView, thumbnail, src]);
 
   return (
     <>
@@ -68,7 +69,7 @@ export function OptimizedImage({
       >
         {/* Loading placeholder */}
         {!isLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center bg-stone-200">
             <div className="w-8 h-8 border-2 border-stone-300 border-t-[#b89b72] rounded-full animate-spin" />
           </div>
         )}
@@ -76,7 +77,7 @@ export function OptimizedImage({
         {/* Actual image - only loads when in viewport */}
         {isInView && (
           <img
-            src={src}
+            src={displaySrc}
             alt={alt}
             loading="lazy"
             onLoad={(e) => setIsLoaded(true)}
@@ -98,7 +99,7 @@ export function OptimizedImage({
         )}
       </div>
 
-      {/* Lightbox */}
+      {/* Lightbox - always uses full-size image */}
       {showLightbox && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"

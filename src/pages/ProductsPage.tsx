@@ -100,6 +100,7 @@ export default function ProductsPage() {
                     alt={p.name}
                     className="mb-4 border border-[#eaeae1]"
                     aspectRatio="4/3"
+                    thumbnail={p.thumbnail ? `${import.meta.env.BASE_URL}Images/Thumbnails/${p.thumbnail}` : undefined}
                   />
                   <span className="absolute top-2 left-2 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[10px] tracking-[0.15em] font-bold uppercase py-1 px-2">
                     {p.ratio}
