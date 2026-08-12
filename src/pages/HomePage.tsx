@@ -807,7 +807,7 @@ export default function HomePage() {
             </span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-10 pb-4 border-b border-[#eaeae1]/60">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 pb-4 border-b border-[#eaeae1]/60">
             {[
               { id: "all", label: "Tất cả" },
               { id: "legal", label: "Pháp Lý & Quy Hoạch" },
@@ -818,7 +818,7 @@ export default function HomePage() {
               <button
                 key={cat.id}
                 onClick={() => setFaqCategory(cat.id)}
-                className={`px-4 py-2 text-sm tracking-wider uppercase transition-luxury whitespace-nowrap ${
+                className={`px-3 py-2 text-sm tracking-wider uppercase transition-luxury whitespace-nowrap ${
                   faqCategory === cat.id
                     ? "text-[#b89b72] font-bold border-b-2 border-[#b89b72]"
                     : "text-stone-400 hover:text-stone-700"
