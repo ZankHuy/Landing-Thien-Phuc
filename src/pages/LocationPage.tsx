@@ -167,7 +167,7 @@ export default function LocationPage() {
                 PHONG THỦY ĐẮC ĐỊA
               </span>
               <h3 className="font-serif text-3xl md:text-4xl text-[#1c1a19] font-light tracking-wide leading-tight mb-6">
-                Thế Đất "Tựa Sơn –<br className="sm:hidden" /> Hướng Thủy"
+                Thế Đất "Tựa Sơn –<br /> Hướng Thủy"
               </h3>
               <div className="w-10 h-px bg-[#b89b72] mb-6"></div>
               <p className="font-sans text-stone-700 font-light text-sm leading-relaxed mb-4">
