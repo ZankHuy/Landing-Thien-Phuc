@@ -593,7 +593,7 @@ export default function HomePage() {
             <span className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold mb-3">
               KẾ HOẠCH ĐÓN TIẾP VIP
             </span>
-            <h3 className="font-serif text-5xl md:text-5xl font-light text-[#1c1a19] tracking-wide">
+            <h3 className="font-serif text-4xl md:text-5xl font-light text-[#1c1a19] tracking-wide whitespace-nowrap">
               Đăng Ký Khảo Sát Thực Tế Bảo Mật
             </h3>
             <p className="font-sans text-stone-500 font-light text-base tracking-wider mt-2">
