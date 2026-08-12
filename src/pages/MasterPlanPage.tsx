@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { Compass, Building, Waves, Utensils, Car, Heart, ChevronRight, Trees, Map } from "lucide-react";
+import { Compass, Building, Waves, Utensils, Car, Heart, ChevronRight, Trees, Map, ExternalLink } from "lucide-react";
 import { SHOWCASE_ITEMS } from "../data";
 import { PROJECT_INFO, FACILITIES, STATS } from "../constants";
 import { OptimizedImage } from "../components/OptimizedImage";
+import { Modal } from "../components/Modal";
 
 const ICON_MAP: Record<string, React.ComponentType<any>> = {
   Temple: Compass,
@@ -16,6 +17,8 @@ const ICON_MAP: Record<string, React.ComponentType<any>> = {
 };
 
 export default function MasterPlanPage() {
+  const [selectedItem, setSelectedItem] = useState<typeof SHOWCASE_ITEMS[0] | null>(null);
+
   return (
     <>
       {/* Hero */}
@@ -144,7 +147,11 @@ export default function MasterPlanPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SHOWCASE_ITEMS.map((item) => (
-              <div key={item.id} className="group bg-[#faf9f6] border border-[#eaeae1] overflow-hidden hover:shadow-xl transition-luxury">
+              <div
+                key={item.id}
+                onClick={() => setSelectedItem(item)}
+                className="group bg-[#faf9f6] border border-[#eaeae1] overflow-hidden hover:shadow-xl hover:border-[#b89b72] transition-luxury cursor-pointer"
+              >
                 <div className="aspect-[4/3] overflow-hidden bg-stone-200">
                   <img
                     src={item.imageUrl}
@@ -164,6 +171,39 @@ export default function MasterPlanPage() {
               </div>
             ))}
           </div>
+
+          {/* Showcase Modal */}
+          <Modal isOpen={!!selectedItem} onClose={() => setSelectedItem(null)}>
+            {selectedItem && (
+              <div>
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={selectedItem.imageUrl}
+                    alt={selectedItem.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8">
+                  <span className="text-xs uppercase tracking-widest text-[#b89b72] font-semibold block mb-2">
+                    {selectedItem.tag}
+                  </span>
+                  <p className="text-xs uppercase tracking-wider text-stone-500 mb-2">{selectedItem.english}</p>
+                  <h3 className="font-serif text-2xl text-[#1c1a19] tracking-wide mb-4">{selectedItem.title}</h3>
+                  <p className="text-sm text-stone-600 font-light leading-relaxed mb-6">
+                    {selectedItem.longDescription}
+                  </p>
+                  <Link
+                    to="/lien-he"
+                    onClick={() => setSelectedItem(null)}
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-[#b89b72] text-white text-sm tracking-widest uppercase font-bold hover:bg-[#a08a62] transition-luxury"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Đăng Ký Tư Vấn
+                  </Link>
+                </div>
+              </div>
+            )}
+          </Modal>
         </motion.div>
       </section>
 

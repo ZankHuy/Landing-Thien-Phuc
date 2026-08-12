@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { Check, Phone, ChevronRight } from "lucide-react";
+import { Check, Phone, ChevronRight, ExternalLink } from "lucide-react";
 import { PROJECT_INFO } from "../constants";
 import { SERVICES } from "../data";
+import { Modal, ServiceModalContent } from "../components/Modal";
 
 export default function ServicesPage() {
+  const [selectedService, setSelectedService] = useState<typeof SERVICES[0] | null>(null);
+
   return (
     <>
       {/* Hero */}
@@ -64,7 +67,8 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.05 }}
-                className="border border-[#eaeae1] bg-[#faf9f6] p-8 hover:border-[#b89b72] hover:shadow-lg transition-luxury flex flex-col"
+                onClick={() => setSelectedService(s)}
+                className="border border-[#eaeae1] bg-[#faf9f6] p-8 hover:border-[#b89b72] hover:shadow-lg transition-luxury flex flex-col cursor-pointer"
               >
                 <span className="text-4xl mb-3">{s.icon}</span>
                 <span className="text-xs uppercase tracking-widest text-[#b89b72] font-semibold font-mono mb-2">
@@ -83,6 +87,19 @@ export default function ServicesPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* Service Modal */}
+          <Modal isOpen={!!selectedService} onClose={() => setSelectedService(null)}>
+            {selectedService && (
+              <ServiceModalContent
+                icon={selectedService.icon}
+                english={selectedService.english}
+                title={selectedService.title}
+                desc={selectedService.desc}
+                features={selectedService.features}
+              />
+            )}
+          </Modal>
         </motion.div>
       </section>
 
