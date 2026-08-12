@@ -218,7 +218,7 @@ export default function LocationPage() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto justify-items-center">
             {PROJECT_INFO.offices.map((off, i) => (
               <div key={i} className="border border-[#eaeae1] bg-[#faf9f6] p-6 hover:border-[#b89b72] transition-luxury">
                 <div className="flex flex-col items-center mb-4">
