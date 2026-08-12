@@ -135,7 +135,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 1.2 }}
-              className="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-white tracking-wide leading-[1.1] mb-6 drop-shadow-md"
+              className="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-white tracking-wide leading-[1.1] mb-6 drop-shadow-md whitespace-nowrap"
             >
               Nơi Tâm Hồn An Trú<br />
               <span className="font-serif italic font-normal text-[#b89b72]">Trong Cõi Vĩnh Hằng</span>
@@ -807,7 +807,7 @@ export default function HomePage() {
             </span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-10 pb-4 border-b border-[#eaeae1]/60">
+          <div className="flex flex-wrap justify-center gap-4 mb-10 pb-4 border-b border-[#eaeae1]/60">
             {[
               { id: "all", label: "Tất cả" },
               { id: "legal", label: "Pháp Lý & Quy Hoạch" },
@@ -818,7 +818,7 @@ export default function HomePage() {
               <button
                 key={cat.id}
                 onClick={() => setFaqCategory(cat.id)}
-                className={`px-3 py-1.5 text-sm tracking-widest uppercase transition-luxury ${
+                className={`px-4 py-2 text-sm tracking-wider uppercase transition-luxury whitespace-nowrap ${
                   faqCategory === cat.id
                     ? "text-[#b89b72] font-bold border-b-2 border-[#b89b72]"
                     : "text-stone-400 hover:text-stone-700"

@@ -57,7 +57,7 @@ export default function ProductsPage() {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto"
         >
-          <div className="flex flex-wrap justify-center gap-2 mb-16">
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
             {[
               { id: "all" as TabFilter, label: "Tất cả sản phẩm" },
               { id: "don" as TabFilter, label: "Mộ Đơn" },
@@ -68,7 +68,7 @@ export default function ProductsPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-5 py-2.5 text-xs tracking-widest uppercase transition-luxury font-medium border ${
+                className={`px-6 py-3 text-sm tracking-wider uppercase transition-luxury font-medium border whitespace-nowrap ${
                   activeTab === tab.id
                     ? "bg-[#1c1a19] text-white border-[#1c1a19]"
                     : "bg-transparent text-stone-500 border-stone-200 hover:text-stone-800 hover:border-stone-400"

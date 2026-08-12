@@ -210,7 +210,7 @@ export default function LocationPage() {
             <span className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold block mb-3">
               VĂN PHÒNG ĐẠI DIỆN
             </span>
-            <h3 className="font-serif text-3xl md:text-4xl font-light text-[#1c1a19] tracking-wide">
+            <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-[#1c1a19] tracking-wide whitespace-nowrap">
               Văn Phòng Đại Diện Tại Hà Nội
             </h3>
           </div>
