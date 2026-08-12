@@ -87,7 +87,9 @@ export default function LocationPage() {
                     ĐỊA CHỈ DỰ ÁN
                   </span>
                   <p className="font-serif text-lg font-medium text-[#1c1a19] leading-snug">
-                    {PROJECT_INFO.address.project}
+                    {PROJECT_INFO.address.projectFormatted.map((line, i) => (
+                      <span key={i} className="block">{line}</span>
+                    ))}
                   </p>
                   <p className="text-sm text-[#b89b72] font-mono mt-2">
                     Tọa độ: {PROJECT_INFO.address.coords}

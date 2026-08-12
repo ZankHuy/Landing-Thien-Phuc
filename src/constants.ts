@@ -6,6 +6,7 @@ export const PROJECT_INFO = {
   zaloPhone: "0911561369",
   address: {
     project: "Đường Bãi Dài, Phường Yên Tử, Thành phố Uông Bí, Tỉnh Quảng Ninh, Việt Nam",
+    projectFormatted: ["Đường Bãi Dài, Phường Yên Tử", "Thành phố Uông Bí", "Tỉnh Quảng Ninh", "Việt Nam"],
     coords: "21.0606617, 106.7481965"
   },
   offices: [

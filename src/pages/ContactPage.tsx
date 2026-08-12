@@ -311,7 +311,11 @@ export default function ContactPage() {
               <h4 className="font-serif text-2xl text-[#1c1a19] mb-3">Địa Chỉ Dự Án</h4>
               <p className="text-sm text-stone-700 font-light leading-relaxed flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#b89b72] mt-0.5 shrink-0" />
-                <span>{PROJECT_INFO.address.project}</span>
+                <span>
+                  {PROJECT_INFO.address.projectFormatted.map((line, i) => (
+                    <span key={i} className="block">{line}</span>
+                  ))}
+                </span>
               </p>
               <p className="text-sm text-[#b89b72] font-mono mt-3">
                 Tọa độ: {PROJECT_INFO.address.coords}
