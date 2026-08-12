@@ -102,7 +102,7 @@ export default function HomePage() {
   return (
     <>
       {/* ============================================ */}
-      {/* HERO SECTION */}
+      {/* TRANG CHỦ */}
       {/* ============================================ */}
       <section className="relative h-[90vh] min-h-[600px] bg-[#1c1a19] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -126,8 +126,8 @@ export default function HomePage() {
               transition={{ delay: 0.3, duration: 1 }}
               className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#1c1a19]/80 backdrop-blur-md border-l-2 border-[#b89b72] mb-6 shadow-md"
             >
-              <span className="text-sm md:text-sm uppercase tracking-[0.4em] text-[#b89b72] font-semibold">
-                THE SANCTUARY OF ETERNAL PEACE
+              <span className="text-sm md:text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold">
+                THIÊN PHÚC VĨNH HẰNG VIÊN
               </span>
             </motion.div>
 
@@ -135,7 +135,7 @@ export default function HomePage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 1.2 }}
-              className="font-serif text-5xl sm:text-7xl lg:text-7xl font-light text-white tracking-wide leading-[1.15] mb-6 drop-shadow-md"
+              className="font-serif text-4xl sm:text-6xl lg:text-6xl font-light text-white tracking-wide leading-[1.15] mb-6 drop-shadow-md"
             >
               Nơi Tâm Hồn An Trú<br />
               <span className="font-serif italic font-normal text-[#b89b72]">Trong Cõi Vĩnh Hằng</span>
@@ -201,7 +201,7 @@ export default function HomePage() {
               <span className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold block mb-3">
                 TỔNG QUAN DỰ ÁN
               </span>
-              <h3 className="font-serif text-5xl md:text-7xl font-light text-[#1c1a19] tracking-wide leading-tight mb-6">
+              <h3 className="font-serif text-4xl md:text-5xl font-light text-[#1c1a19] tracking-wide leading-tight mb-6">
                 {PROJECT_OVERVIEW.headline}
               </h3>
               <div className="w-10 h-px bg-[#b89b72] mb-6"></div>
@@ -415,7 +415,7 @@ export default function HomePage() {
 
                   <div className="mt-8 pt-6 border-t border-[#eaeae1] flex items-center justify-between">
                     <span className="text-sm text-stone-400 uppercase tracking-widest font-mono">
-                      YÊN TỬ SANCTUARY
+                      CẢNH QUAN THIÊN PHÚC
                     </span>
                     <button
                       onClick={() => {
@@ -443,7 +443,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* HERITAGE SHOWCASE - BENTO */}
+      {/* BỘ SƯU TẬP DI SẢN */}
       {/* ============================================ */}
       <section id="landscape" className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
@@ -576,7 +576,7 @@ export default function HomePage() {
       </AnimatePresence>
 
       {/* ============================================ */}
-      {/* RESERVATION FORM */}
+      {/* MẪU THIẾT KẾ ĐỘC ĐÁO */}
       {/* ============================================ */}
       <section id="reservation" className="py-24 px-6 lg:px-12 bg-[#faf9f6] border-t border-[#eaeae1]">
         <motion.div
@@ -771,7 +771,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* FAQ */}
+      {/* CÂU HỎI THƯỜNG GẶP */}
       {/* ============================================ */}
       <section className="py-24 px-6 lg:px-12 bg-white border-t border-[#eaeae1]">
         <motion.div

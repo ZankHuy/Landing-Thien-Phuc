@@ -37,7 +37,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="font-serif text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-wide mb-6 leading-tight"
+            className="font-serif text-4xl sm:text-5xl lg:text-5xl font-light text-white tracking-wide mb-6 leading-tight"
           >
             {PROJECT_INFO.name}
           </motion.h1>
