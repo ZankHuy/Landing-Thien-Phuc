@@ -25,7 +25,7 @@ import {
   FAQ_ITEMS,
   PROJECT_OVERVIEW
 } from "../data";
-import { PROJECT_INFO, STATS, FACILITIES } from "../constants";
+import { PROJECT_INFO, STATS, FACILITIES, PRICE_TABLE } from "../constants";
 import type { ShowcaseItem, EnlightenmentStep } from "../data";
 import { Link } from "react-router-dom";
 import { OptimizedImage } from "../components/OptimizedImage";
@@ -441,6 +441,110 @@ export default function HomePage() {
                 </div>
               </motion.div>
             </AnimatePresence>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ============================================ */}
+      {/* BỘ SƯU TẬP SẢN PHẨM - HOME */}
+      {/* ============================================ */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto"
+        >
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold mb-3 block">
+              BỘ SƯU TẬP DI SẢN
+            </span>
+            <h3 className="font-serif text-3xl md:text-4xl font-light text-[#1c1a19] tracking-wide">
+              Khuôn Viên Vĩnh Hằng Giới Hạn
+            </h3>
+            <p className="text-sm text-stone-500 font-light mt-3">
+              Sản phẩm chế tác cao cấp dành riêng cho từng quy mô và ước vọng dòng họ
+            </p>
+            <div className="w-12 h-px bg-[#b89b72] mx-auto mt-4"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PRICE_TABLE.map((p) => (
+              <div
+                key={p.code}
+                className={`group border p-5 flex flex-col justify-between transition-luxury shadow-sm hover:shadow-md ${
+                  p.featured
+                    ? "border-[#b89b72]/40 bg-white relative hover:border-[#b89b72]"
+                    : "border-[#eaeae1] bg-[#faf9f6] hover:border-[#b89b72]"
+                }`}
+              >
+                {p.featured && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#b89b72] text-white text-xs tracking-[0.2em] font-bold uppercase py-1 px-3 z-10 shadow-sm">
+                    ƯU TIÊN LỰA CHỌN
+                  </span>
+                )}
+                <div className="relative">
+                  <OptimizedImage
+                    src={`${import.meta.env.BASE_URL}Images/Photos/${p.image}`}
+                    alt={p.name}
+                    className="mb-4 border border-[#eaeae1]"
+                    aspectRatio="4/3"
+                    thumbnail={p.thumbnail ? `${import.meta.env.BASE_URL}Images/Thumbnails/${p.thumbnail}` : undefined}
+                  />
+                  <span className="absolute top-2 left-2 bg-[#1c1a19]/80 backdrop-blur-sm text-white text-[10px] tracking-[0.15em] font-bold uppercase py-1 px-2">
+                    {p.ratio}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-[10px] font-mono tracking-widest text-[#b89b72] uppercase font-bold">
+                    {p.code}
+                  </span>
+                </div>
+                <h4 className="font-serif text-xl font-light text-[#1c1a19] tracking-wide mb-2">{p.name}</h4>
+                <div className="w-6 h-px bg-[#b89b72] my-3"></div>
+                <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
+                  <div>
+                    <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Diện tích</span>
+                    <span className="text-[#1c1a19] font-serif font-medium">{p.area}</span>
+                  </div>
+                  <div>
+                    <span className="text-stone-400 block text-[10px] uppercase tracking-widest">Số lượng</span>
+                    <span className="text-[#1c1a19] font-serif font-medium">{p.quantity}</span>
+                  </div>
+                </div>
+                <p className="font-sans text-stone-500 font-light text-xs leading-relaxed mb-4">{p.desc}</p>
+                <ul className="text-xs text-stone-600 flex flex-col gap-1.5">
+                  {p.features.map((f, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <Check className="w-3 h-3 text-[#b89b72] shrink-0 mt-0.5" /> {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 pt-4 border-t border-[#eaeae1] flex justify-between items-center">
+                  <span className="text-[10px] uppercase tracking-widest text-stone-400 font-mono">BÀN GIAO VĨNH VIỄN</span>
+                  <Link
+                    to="/lien-he"
+                    className={`text-[11px] font-semibold uppercase tracking-widest transition-colors ${
+                      p.featured
+                        ? "text-[#b89b72] hover:text-[#1c1a19]"
+                        : "text-[#1c1a19] hover:text-[#b89b72]"
+                    }`}
+                  >
+                    Đăng ký →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/san-pham"
+              className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#b89b72] text-[#b89b72] text-sm tracking-widest uppercase font-medium hover:bg-[#b89b72] hover:text-white transition-luxury"
+            >
+              Xem tất cả sản phẩm <ChevronRight className="w-3 h-3" />
+            </Link>
           </div>
         </motion.div>
       </section>
