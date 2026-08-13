@@ -29,8 +29,7 @@ Landing page giới thiệu dự án công viên nghĩa trang cao cấp **Thiên
 Toàn bộ thông tin hotline, email, địa chỉ, chủ đầu tư... được quản lý tập trung tại `src/constants.ts`:
 
 - Hotline: **0911.561.369** · Zalo: **0911.561.369**
-- Email: info@nghiatrangthienphuc.com
-- Văn phòng: Quảng Ninh (Uông Bí), Hà Nội (Đống Đa), TP.HCM (An Khánh)
+- Văn phòng: Hà Nội 
 - Chủ đầu tư: Công Ty Cổ Phần Long Hải Quảng Ninh
 - Đơn vị phát triển: Công Ty CP TM & DV Sala Garden
 
