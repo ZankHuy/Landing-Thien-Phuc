@@ -9,11 +9,11 @@ interface OptimizedImageProps {
 }
 
 /**
- * Optimized image with:
- * - Thumbnail (small size) for display
- * - Full-size image for lightbox
- * - Native lazy loading
- * - Click to view full size in lightbox
+ * Hình ảnh tối ưu với:
+ * - Ảnh thu nhỏ (kích thước nhỏ) để hiển thị
+ * - Ảnh kích thước đầy đủ cho lightbox
+ * - Lazy loading bản địa
+ * - Click để xem kích thước đầy đủ trong lightbox
  */
 export function OptimizedImage({
   src,
@@ -28,10 +28,10 @@ export function OptimizedImage({
   const [isHighResLoaded, setIsHighResLoaded] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 
-  // Use thumbnail for display, full image for lightbox
+  // Sử dụng ảnh thu nhỏ để hiển thị, ảnh đầy đủ cho lightbox
   const displaySrc = thumbnail || src;
 
-  // Intersection Observer for lazy loading
+  // Intersection Observer để lazy loading
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -50,7 +50,7 @@ export function OptimizedImage({
     return () => observer.disconnect();
   }, []);
 
-  // Preload high-res image when in view
+  // Tải trước ảnh độ phân giải cao khi cuộn tới
   useEffect(() => {
     if (isInView && thumbnail && src !== thumbnail) {
       const img = new Image();
@@ -67,14 +67,14 @@ export function OptimizedImage({
         style={{ aspectRatio }}
         onClick={() => setShowLightbox(true)}
       >
-        {/* Loading placeholder */}
+        {/* Placeholder khi đang tải */}
         {!isLoaded && (
           <div className="absolute inset-0 flex items-center justify-center bg-stone-200">
             <div className="w-8 h-8 border-2 border-stone-300 border-t-[#b89b72] rounded-full animate-spin" />
           </div>
         )}
 
-        {/* Actual image - only loads when in viewport */}
+        {/* Hình ảnh thật - chỉ tải khi nằm trong viewport */}
         {isInView && (
           <img
             src={displaySrc}
@@ -87,7 +87,7 @@ export function OptimizedImage({
           />
         )}
 
-        {/* Zoom icon overlay */}
+        {/* Overlay biểu tượng phóng to */}
         {isLoaded && (
           <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20">
             <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
@@ -99,7 +99,7 @@ export function OptimizedImage({
         )}
       </div>
 
-      {/* Lightbox - always uses full-size image */}
+      {/* Lightbox - luôn dùng ảnh kích thước đầy đủ */}
       {showLightbox && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"

@@ -48,7 +48,7 @@ export default function MasterPlanPage() {
         </div>
       </section>
 
-      {/* Stats Summary */}
+      {/* Thống kê */}
       <section className="py-16 px-6 lg:px-12 bg-[#f5f4ed] border-b border-[#eaeae1]">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           {STATS.map((s, i) => (
@@ -61,7 +61,7 @@ export default function MasterPlanPage() {
         </div>
       </section>
 
-      {/* Master Plan Hero */}
+      {/* Hero quy hoạch tổng thể */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -91,7 +91,7 @@ export default function MasterPlanPage() {
         </motion.div>
       </section>
 
-      {/* Facilities Grid */}
+      {/* Lưới tiện ích */}
       <section className="py-24 px-6 lg:px-12 bg-[#f5f4ed]/50">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -127,7 +127,7 @@ export default function MasterPlanPage() {
         </motion.div>
       </section>
 
-      {/* Showcase landscape */}
+      {/* Trưng bày cảnh quan */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -172,7 +172,7 @@ export default function MasterPlanPage() {
             ))}
           </div>
 
-          {/* Showcase Modal */}
+          {/* Modal trưng bày */}
           <Modal isOpen={!!selectedItem} onClose={() => setSelectedItem(null)}>
             {selectedItem && (
               <div>
@@ -207,7 +207,7 @@ export default function MasterPlanPage() {
         </motion.div>
       </section>
 
-      {/* Design principles */}
+      {/* Nguyên tắc thiết kế */}
       <section className="py-24 px-6 lg:px-12 bg-[#f5f4ed]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

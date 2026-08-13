@@ -50,7 +50,7 @@ export default function LocationPage() {
         </div>
       </section>
 
-      {/* Map & Info */}
+      {/* Bản đồ */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -145,7 +145,7 @@ export default function LocationPage() {
         </motion.div>
       </section>
 
-      {/* Phong Thủy Section */}
+      {/* Phần Phong Thủy */}
       <section className="py-24 px-6 lg:px-12 bg-[#f5f4ed]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

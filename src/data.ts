@@ -33,7 +33,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     id: "step1",
     number: "01",
     title: "Tĩnh Tâm",
-    english: "Stillness of Mind",
+    english: "Sự Tĩnh Lặng Của Tâm Hồn",
     description: "Giữa xô bồ cuộc sống, tìm về một khoảng lặng bình yên, nơi tâm hồn lắng dịu dưới bóng đại ngàn Yên Tử ngay từ những bước chân đầu tiên qua cổng tam quan tôn kính.",
     quote: "Tâm có tĩnh, lòng mới sáng; đất có lành, cốt mới an.",
     imageUrl: img("cong.jpg")
@@ -42,7 +42,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     id: "step2",
     number: "02",
     title: "Chánh Niệm",
-    english: "Mindfulness",
+    english: "Chánh Niệm Tỉnh Thức",
     description: "Ý thức rõ ràng từng hơi thở, từng bước đi tôn nghiêm tiến vào Đền Trình linh thiêng, thắp nén nhang thành kính dâng lên chư Phật và tổ tiên.",
     quote: "Trọn vẹn với hiện tại, thấu cảm mạch sống vĩnh hằng trong từng khoảnh khắc.",
     imageUrl: img("den_trinh.jpg")
@@ -51,7 +51,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     id: "step3",
     number: "03",
     title: "Vô Thường",
-    english: "Impermanence",
+    english: "Vô Thường Sinh Diệt",
     description: "Nghỉ chân bên hiên Nhà để tro cổ kính, ngẫm về dòng chảy không ngừng của thời gian và chuẩn bị chu toàn một di sản tâm linh trường tồn vạn thuở.",
     quote: "Sinh tử tựa mây trôi; chuẩn bị chu toàn là đỉnh cao của sự an lòng.",
     imageUrl: img("nha_chua_tro.jpg")
@@ -60,7 +60,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     id: "step4",
     number: "04",
     title: "An Nhiên",
-    english: "Serenity",
+    english: "An Nhiên Tự Tại",
     description: "Thong dong tự tại tọa đàm nơi chòi ngắm cảnh thanh tịnh, tựa lưng vào núi Kim Cương hùng vĩ và hướng tầm mắt ra làn nước hồ tĩnh lặng.",
     quote: "Tựa sơn vững chãi qua ngàn năm, hướng thủy hanh thông trọn kiếp người.",
     imageUrl: img("choi_ngoi_ngam_canh.jpg")
@@ -69,7 +69,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     id: "step5",
     number: "05",
     title: "Trí Tuệ",
-    english: "Wisdom",
+    english: "Trí Tuệ Minh Đức",
     description: "Thấu suốt lẽ sinh tử tại Nhà Điều Hành trung tâm, nơi quy hoạch phong thủy đỉnh cao được hiển lộ tường tận bởi các chuyên gia phong thủy Á Đông.",
     quote: "Bậc trí giả nhìn xa trông rộng, an bài tương lai bằng sự thấu đáo vẹn toàn.",
     imageUrl: img("nha_dieu_hanh.jpg")
@@ -78,7 +78,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     id: "step6",
     number: "06",
     title: "Tâm An",
-    english: "Serenity of Heart",
+    english: "Tâm An Thanh Tịnh",
     description: "Thực hiện đại lễ tri ân tôn nghiêm tại Nhà Tang Lễ hoàng gia, bày tỏ lòng hiếu nghĩa vẹn tròn và gieo mầm phúc đức sâu dày cho muôn đời con cháu.",
     quote: "Phúc đức tổ tiên lưu vạn thuở; hiếu nghĩa con cháu rạng muôn đời.",
     imageUrl: img("nha_tang_le.jpg")
@@ -87,7 +87,7 @@ export const ENLIGHTENMENT_STEPS: EnlightenmentStep[] = [
     id: "step7",
     number: "07",
     title: "Niết Bàn",
-    english: "Nirvana",
+    english: "Cõi Niết Bàn An Lạc",
     description: "Tâm hồn nhẹ tênh như sương khói đại ngàn, rũ bỏ mọi vướng bận hồng trần, hòa mình hoàn toàn vào bức tranh sơn thủy vĩnh hằng.",
     quote: "Rũ sạch bụi trần, thong dong bước vào cõi vĩnh hằng vô ưu.",
     imageUrl: img("tong_quan_2.jpg")
@@ -98,7 +98,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: "family-grave",
     title: "Khuôn Viên Đại Gia Tộc",
-    english: "Ancestral Estate Plots",
+    english: "Khuôn Viên Tổ Tiên",
     description: "Không gian sinh thái hoàng gia biệt lập tạc tác thủ công từ đá tự nhiên, lưu giữ vương triều ký ức lâu đời của dòng tộc.",
     longDescription: "Khuôn viên mộ đại gia tộc là kiệt tác kiến trúc tôn nghiêm, tọa lạc tại những vị thế đắc địa tụ khí tụ tài nhất dự án. Thiết kế tinh xảo kết hợp đá xanh nguyên khối điêu khắc tinh vi bởi các nghệ nhân lành nghề nhất Việt Nam, vây quanh bởi tường rào tùng bách xanh mướt và khuôn viên rộng rãi cho con cháu tề tựu.",
     imageUrl: img("7.jpg"),
@@ -107,16 +107,16 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: "zen-garden",
     title: "Cảnh Sắc Tịnh An",
-    english: "Zen Meditation Landscapes",
+    english: "Cảnh Quan Thiền Định",
     description: "Mỹ học tối giản giao hòa thiên nhiên tinh khôi với lối đi sỏi trắng, hồ thiền tĩnh lặng và những rặng tùng bách nghiêm trang.",
     longDescription: "Sự giao hòa tuyệt mỹ giữa nghệ thuật kiến trúc thiền tịnh tối giản Á Đông và cảnh sắc nguyên sơ linh thiêng của đại ngàn Yên Tử. Từng con đường, tảng đá đều được sắp đặt tỉ mỉ mang âm hưởng vườn Thiền tinh tế, giúp rũ bỏ mọi phiền muộn, đưa bước chân viếng thăm chạm vào sự yên tịnh thẳm sâu.",
     imageUrl: img("8.jpg"),
-    tag: "Zen Landscape"
+    tag: "Cảnh Thiền"
   },
   {
     id: "den-trinh",
     title: "Điện Phật & Đền Trình",
-    english: "Imperial Ancestral Shrine",
+    english: "Đền Thờ Tổ Tiên Hoàng Gia",
     description: "Chóp đỉnh tâm linh uy nghi, mái ngói cổ kính, nơi tiếp nhận long mạch thiêng liêng và tổ chức các nghi lễ đại đàn chuẩn quốc gia.",
     longDescription: "Công trình đền miếu cổ kính tọa lạc ngay trên long mạch của dự án. Từng chi tiết chạm khắc rồng phượng, mái đao cong vút được hoàn thiện bởi các thợ mộc mỹ nghệ truyền thống. Nơi đây là điểm cầu an, cầu siêu và hội tụ sinh khí tốt lành bảo vệ sự thịnh vượng đời đời của gia chủ.",
     imageUrl: img("den_trinh.jpg"),
@@ -125,7 +125,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: "choi-ngam-canh",
     title: "Chòi Tọa Thiền Sơn Thủy",
-    english: "Panoramic Pavilion",
+    english: "Đài Ngắm Cảnh Toàn Cảnh",
     description: "Chòi nghỉ ngơi thưởng cảnh thiết kế mở, thu trọn toàn bộ bức tranh phong cảnh hùng vĩ của dải núi Kim Cương.",
     longDescription: "Không gian nghỉ chân thanh tịnh dành cho gia quyến khi ghé thăm viếng mộ. Kiến trúc mái ngói cong truyền thống kết hợp gỗ tự nhiên quý hiếm, mở ra tầm nhìn bao quát toàn bộ quy hoạch tựa sơn hướng thủy.",
     imageUrl: img("choi_ngoi_ngam_canh.jpg"),
@@ -134,7 +134,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: "thuy-ta",
     title: "Nhà Hàng Thủy Tạ",
-    english: "Lakeside Tea & Dining",
+    english: "Trà Đạo & Ẩm Thực Ven Hồ",
     description: "Khu vực ẩm thực trà chay thượng hạng ven hồ, nơi gia tộc sum họp trong không khí ấm cúng và tôn nghiêm.",
     longDescription: "Khu nhà hàng Thủy Tạ ven hồ tĩnh tại cung cấp các món ăn chay thanh tịnh, trà đạo Á Đông và không gian đón tiếp sang trọng cho các nghi lễ gia tộc.",
     imageUrl: img("nha_hang_thuy_ta.jpg"),
@@ -143,7 +143,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: "nha-dich-vu",
     title: "Khu Dịch Vụ 5-Sao",
-    english: "VIP Hospitality Suite",
+    english: "Phòng Tiếp Khách VIP",
     description: "Trung tâm quản gia chuyên nghiệp phục vụ 24/7 mọi tâm nguyện và nhu cầu của gia quyến.",
     longDescription: "Tòa nhà dịch vụ trung tâm đạt chuẩn resort 5-sao với phòng tiếp khách VIP, khu vực tư vấn phong thủy riêng tư, cùng đội ngũ quản gia tận tâm hỗ trợ từng chi tiết nhỏ nhất.",
     imageUrl: img("nha_dich_vu.jpg"),
@@ -251,7 +251,7 @@ export const SERVICES = [
     id: "care",
     icon: "🪴",
     title: "Dịch Vụ Trông Nom Hương Khói Trọn Đời",
-    english: "Perpetual Care Service",
+    english: "Dịch Vụ Chăm Sóc Vĩnh Viễn",
     desc: "Đội ngũ quản gia túc trực chăm sóc mộ phần: cúng lễ, thắp hương định kỳ, chăm sóc cây xanh, vệ sinh lau chùi mỗi ngày. Gia đình hoàn toàn yên tâm dù ở xa.",
     features: [
       "Thắp hương ngày rằm, mùng một, sóc vọng",
@@ -265,7 +265,7 @@ export const SERVICES = [
     id: "funeral",
     icon: "🕯️",
     title: "Dịch Vụ Tang Lễ Trọn Gói",
-    english: "Full-Service Funeral",
+    english: "Tang Lễ Trọn Gói",
     desc: "Hỗ trợ toàn bộ quy trình tang lễ tại Nhà Tang Lễ hoàng gia trong khuôn viên dự án. Đội ngũ chuyên nghiệp đồng hành cùng gia đình trong giờ phút thiêng liêng.",
     features: [
       "Nhà Tang Lễ đầy đủ tiện nghi chuẩn 5 sao",
@@ -279,7 +279,7 @@ export const SERVICES = [
     id: "cremation",
     icon: "🔥",
     title: "Dịch Vụ Hỏa Táng & Lưu Tro",
-    english: "Cremation & Ash Storage",
+    english: "Hỏa Táng & Lưu Giữ Tro Cốt",
     desc: "Lò hỏa táng hiện đại đặt tại khuôn viên, quy trình tôn nghiêm theo đúng nghi thức truyền thống. Nhà để tro cốt được bảo quản vĩnh viễn trong không gian thanh tịnh.",
     features: [
       "Lò hỏa táng công nghệ tiên tiến, không khói",
@@ -292,7 +292,7 @@ export const SERVICES = [
     id: "cung",
     icon: "🍵",
     title: "Dịch Vụ Mâm Cúng",
-    english: "Votive Offering Service",
+    english: "Dịch Vụ Dâng Cúng",
     desc: "Chuẩn bị mâm cúng trọn gói theo phong tục Việt Nam cho các ngày giỗ, lễ tết, sóc vọng, kỵ nhật. Đầu bếp chay chuyên nghiệp, nguyên liệu thượng hạng.",
     features: [
       "Mâm cúng chay truyền thống",
@@ -306,7 +306,7 @@ export const SERVICES = [
     id: "fengshui",
     icon: "🧭",
     title: "Tư Vấn Phong Thủy Chuyên Sâu",
-    english: "Feng Shui Consultation",
+    english: "Tư Vấn Phong Thủy",
     desc: "Chuyên gia phong thủy Á Đông tư vấn vị trí, hướng mộ phần và ngày giờ an táng phù hợp với tuổi, mệnh gia chủ. Cam kết hài hòa long mạch dự án.",
     features: [
       "Xem tuổi, mệnh gia chủ",
@@ -319,7 +319,7 @@ export const SERVICES = [
     id: "transport",
     icon: "🚗",
     title: "Dịch Vụ Limousine Đưa Đón VIP",
-    english: "VIP Limousine Transport",
+    english: "Dịch Vụ Limousine VIP",
     desc: "Xe Limousine/Mercedes hạng sang đưa đón miễn phí từ Hà Nội, Hải Phòng, Hạ Long và các tỉnh lân cận. Phục vụ gia đình tham quan khảo sát thực tế.",
     features: [
       "Limousine 9 chỗ cao cấp",

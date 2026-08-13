@@ -37,7 +37,7 @@ export function Header({ isAudioPlaying, toggleAudio }: HeaderProps) {
           />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Điều hướng trên máy tính */}
         <nav className="hidden lg:flex items-center gap-7 text-[11px] font-medium tracking-widest text-[#2c2a29]/70 uppercase">
           {NAV_ITEMS.map((item) => (
             <NavLink
@@ -56,7 +56,7 @@ export function Header({ isAudioPlaying, toggleAudio }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          {/* Audio control */}
+          {/* Điều khiển âm thanh */}
           <button
             onClick={toggleAudio}
             className={`p-2 rounded-full border transition-all duration-300 ${
@@ -77,7 +77,7 @@ export function Header({ isAudioPlaying, toggleAudio }: HeaderProps) {
             )}
           </button>
 
-          {/* Phone quick CTA desktop */}
+          {/* Nút gọi điện nhanh trên máy tính */}
           <a
             href={`tel:${PROJECT_INFO.hotlineRaw}`}
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 bg-[#faf9f6] border border-[#b89b72] text-[#b89b72] text-sm tracking-widest uppercase font-medium hover:bg-[#b89b72] hover:text-white transition-luxury"
@@ -94,7 +94,7 @@ export function Header({ isAudioPlaying, toggleAudio }: HeaderProps) {
             Đón Tiếp VIP
           </Link>
 
-          {/* Mobile menu trigger */}
+          {/* Nút mở menu trên di động */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 border border-[#eaeae1] bg-white text-[#1c1a19]"
@@ -105,7 +105,7 @@ export function Header({ isAudioPlaying, toggleAudio }: HeaderProps) {
         </div>
       </div>
 
-      {/* Mobile menu drawer */}
+      {/* Ngăn menu trên di động */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.nav

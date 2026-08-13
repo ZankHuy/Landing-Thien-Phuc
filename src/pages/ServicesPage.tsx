@@ -38,7 +38,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services grid */}
+      {/* Lưới dịch vụ */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -88,7 +88,7 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* Service Modal */}
+          {/* Modal dịch vụ */}
           <Modal isOpen={!!selectedService} onClose={() => setSelectedService(null)}>
             {selectedService && (
               <ServiceModalContent
@@ -103,7 +103,7 @@ export default function ServicesPage() {
         </motion.div>
       </section>
 
-      {/* Process timeline */}
+      {/* Mốc thời gian quy trình */}
       <section className="py-24 px-6 lg:px-12 bg-[#f5f4ed]/50">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -143,7 +143,7 @@ export default function ServicesPage() {
         </motion.div>
       </section>
 
-      {/* Testimonials placeholder */}
+      {/* Placeholder đánh giá từ khách hàng */}
       <section className="py-24 px-6 lg:px-12 bg-white border-t border-[#eaeae1]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

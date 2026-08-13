@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Phone, Mail, MapPin, User, Calendar, MessageSquare, CheckCircle, Clock } from "lucide-react";
 import { PROJECT_INFO } from "../constants";
 
-// Google Form entry IDs
+// ID các mục nhập của Google Form
 const GOOGLE_FORM_ENTRY_IDS = {
   fullName: "entry.1788567409",
   phone: "entry.923084852",
@@ -123,7 +123,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact options */}
+      {/* Các tùy chọn liên hệ */}
       <section className="py-16 px-6 lg:px-12 bg-[#f5f4ed] border-b border-[#eaeae1]">
         <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
@@ -148,7 +148,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Form + Info */}
+      {/* Biểu mẫu + Thông tin */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -157,7 +157,7 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12"
         >
-          {/* Left - Form */}
+          {/* Bên trái - Biểu mẫu */}
           <div className="lg:col-span-7">
             <span className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold block mb-3">
               GỬI YÊU CẦU TƯ VẤN
@@ -305,7 +305,7 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* Right - Info */}
+          {/* Bên phải - Thông tin */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#f5f4ed] p-8 border-l-4 border-[#b89b72]">
               <h4 className="font-serif text-2xl text-[#1c1a19] mb-3">Địa Chỉ Dự Án</h4>
@@ -381,7 +381,7 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-      {/* Map */}
+      {/* Bản đồ */}
       <section className="bg-[#faf9f6] border-t border-[#eaeae1]">
         <iframe
           src="https://maps.google.com/maps?q=21.0606617,106.7481965&t=&z=15&ie=UTF8&iwloc=&output=embed"

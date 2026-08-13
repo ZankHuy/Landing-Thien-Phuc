@@ -10,7 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 
 export default function App() {
-  // ---------- Audio Synthesizer State ----------
+  // ---------- Trạng thái Bộ tổng hợp Âm thanh ----------
   const [isAudioPlaying, setIsAudioPlaying] = useState<boolean>(false);
   const audioContextRef = useRef<AudioContext | null>(null);
   const droneOsc1Ref = useRef<OscillatorNode | null>(null);
@@ -78,7 +78,7 @@ export default function App() {
 
       setIsAudioPlaying(true);
     } catch (err) {
-      console.warn("Web Audio API is not supported in this browser environment.", err);
+      console.warn("Trình duyệt không hỗ trợ Web Audio API.", err);
     }
   };
 

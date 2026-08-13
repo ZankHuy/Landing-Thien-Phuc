@@ -42,7 +42,7 @@ strong, b {
   font-weight: 600;
 }
 
-/* Custom scrollbar matching luxury aesthetic */
+/* Thanh cuộn tùy chỉnh theo phong cách sang trọng */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -61,7 +61,7 @@ strong, b {
   background: #a1855e;
 }
 
-/* Elegant fade overlays for images */
+/* Lớp phủ mờ tinh tế cho hình ảnh */
 .vinhhang-overlay-dark {
   background: linear-gradient(to bottom, rgba(28, 26, 25, 0.2) 0%, rgba(28, 26, 25, 0.8) 100%);
 }
@@ -70,12 +70,12 @@ strong, b {
   background: linear-gradient(to right, rgba(245, 244, 237, 0.95) 0%, rgba(245, 244, 237, 0.2) 100%);
 }
 
-/* Delicate elegant transitions */
+/* Chuyển động tinh tế, sang trọng */
 .transition-luxury {
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Subtle pulse for active indicators */
+/* Hiệu ứng nhấp nháy tinh tế cho chỉ báo đang hoạt động */
 @keyframes delicatePulse {
   0%, 100% {
     opacity: 0.5;
@@ -91,7 +91,7 @@ strong, b {
   animation: delicatePulse 4s infinite ease-in-out;
 }
 
-/* Luxury radar pulse for interactive hotspots */
+/* Hiệu ứng radar xung sang trọng cho điểm tương tác */
 @keyframes radarPulse {
   0% {
     transform: scale(0.95);
@@ -117,7 +117,7 @@ strong, b {
   pointer-events: none;
 }
 
-/* Chat Concierge Typing Indicator */
+/* Chỉ báo đang nhập của Quản gia Trò chuyện */
 @keyframes typingDotBounce {
   0%, 100% {
     transform: translateY(0);

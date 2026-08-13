@@ -46,7 +46,7 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [expandedFaqId, setExpandedFaqId] = useState<string | null>(null);
 
-  // Booking form
+  // Biểu mẫu đặt lịch
   const [bookingForm, setBookingForm] = useState({
     fullName: "",
     phone: "",
@@ -93,7 +93,7 @@ export default function HomePage() {
     e.preventDefault();
     if (validateForm()) {
       setFormSubmitted(true);
-      // Simulate sending - in real life, this would POST to a server
+      // Mô phỏng việc gửi - trong thực tế sẽ POST lên máy chủ
       const payload = { ...bookingForm, submittedAt: new Date().toISOString() };
       console.log("[Booking] New reservation:", payload);
     }
@@ -229,7 +229,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Stats grid */}
+          {/* Lưới thống kê */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 border-t border-b border-[#eaeae1] py-10">
             {STATS.map((s, i) => (
               <div key={i} className="text-center">
@@ -246,7 +246,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Three pillars */}
+          {/* Ba trụ cột */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {PROJECT_OVERVIEW.pillars.map((pillar, i) => (
               <div
@@ -617,7 +617,7 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Showcase Lightbox */}
+      {/* Lightbox trưng bày */}
       <AnimatePresence>
         {selectedShowcase && (
           <div className="fixed inset-0 bg-[#1c1a19]/70 backdrop-blur-md z-50 flex items-center justify-center p-4">

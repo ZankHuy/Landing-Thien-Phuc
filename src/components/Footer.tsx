@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="bg-[#1c1a19] text-white py-16 px-6 lg:px-12 border-t border-[#b89b72]/20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-stone-800">
-        {/* Brand */}
+        {/* Thương hiệu */}
         <div className="space-y-4">
           <Link to="/" className="inline-block">
             <img
@@ -25,7 +25,7 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Navigation */}
+        {/* Điều hướng */}
         <div>
           <h5 className="text-sm uppercase tracking-widest text-[#b89b72] font-semibold mb-4">DANH MỤC</h5>
           <ul className="text-xs text-stone-400 font-light space-y-2.5">
@@ -39,7 +39,7 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Office */}
+        {/* Văn phòng */}
         <div>
           <h5 className="text-sm uppercase tracking-widest text-[#b89b72] font-semibold mb-4">VĂN PHÒNG ĐẠI DIỆN</h5>
           <ul className="text-xs text-stone-400 font-light space-y-3 leading-relaxed">
@@ -55,7 +55,7 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
+        {/* Liên hệ */}
         <div>
           <h5 className="text-sm uppercase tracking-widest text-[#b89b72] font-semibold mb-4">LIÊN HỆ TƯ VẤN</h5>
           <ul className="text-xs text-stone-400 font-light space-y-3 leading-relaxed">
@@ -81,11 +81,11 @@ export function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-stone-500 gap-4">
-        <p>© {new Date().getFullYear()} Thiên Phúc Vĩnh Hằng Viên. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Thiên Phúc Vĩnh Hằng Viên. Mọi quyền được bảo lưu.</p>
         <div className="flex gap-6 uppercase tracking-widest">
           <Link to="/lien-he" className="hover:text-white">Điều khoản bảo mật</Link>
           <Link to="/gioi-thieu" className="hover:text-white">Di sản kế thừa</Link>
-          <a href={`tel:${PROJECT_INFO.hotlineRaw}`} className="hover:text-white">Hotline 24/7</a>
+          <a href={`tel:${PROJECT_INFO.hotlineRaw}`} className="hover:text-white">Đường dây nóng 24/7</a>
         </div>
       </div>
     </footer>

@@ -10,7 +10,7 @@ export function FloatingContact() {
 
   useEffect(() => {
     const onScroll = () => {
-      // Show floating contact after user scrolls past hero (600px)
+      // Hiện nút liên hệ nổi khi người dùng cuộn qua hero (600px)
       const y = window.scrollY;
       setVisible(y > 600);
       setShowTop(y > 1200);
@@ -25,7 +25,7 @@ export function FloatingContact() {
 
   return (
     <>
-      {/* Hidden until scroll threshold */}
+      {/* Hiển thị khi vượt ngưỡng cuộn */}
       <AnimatePresence>
         {visible && (
           <motion.div
@@ -35,7 +35,7 @@ export function FloatingContact() {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3"
           >
-            {/* Expanded panel */}
+            {/* Bảng mở rộng */}
             <AnimatePresence>
               {open && (
                 <motion.div
@@ -45,7 +45,7 @@ export function FloatingContact() {
                   transition={{ duration: 0.25 }}
                   className="bg-[#1c1a19] text-white border border-[#b89b72]/40 shadow-2xl w-72 overflow-hidden"
                 >
-                  {/* Header */}
+                  {/* Tiêu đề */}
                   <div className="px-5 py-4 bg-gradient-to-br from-[#1c1a19] to-[#2c2a29] border-b border-[#b89b72]/20">
                     <p className="text-sm uppercase tracking-[0.3em] text-[#b89b72] font-semibold">
                       Tư vấn viên
@@ -58,7 +58,7 @@ export function FloatingContact() {
                     </p>
                   </div>
 
-                  {/* Hotline button */}
+                  {/* Nút đường dây nóng */}
                   <a
                     href={`tel:${PROJECT_INFO.hotlineRaw}`}
                     className="flex items-center gap-3 px-5 py-4 hover:bg-[#b89b72]/10 transition-colors border-b border-stone-800"
@@ -74,7 +74,7 @@ export function FloatingContact() {
                     </div>
                   </a>
 
-                  {/* Zalo button */}
+                  {/* Nút Zalo */}
                   <a
                     href={`https://zalo.me/${PROJECT_INFO.zaloPhone}`}
                     target="_blank"
@@ -101,9 +101,9 @@ export function FloatingContact() {
               )}
             </AnimatePresence>
 
-            {/* Main toggle button */}
+            {/* Nút chuyển đổi chính */}
             <div className="flex items-center gap-2">
-              {/* Back-to-top button (separate) */}
+              {/* Nút xem lên đầu trang (tách riêng) */}
               <AnimatePresence>
                 {showTop && (
                   <motion.button
@@ -127,7 +127,7 @@ export function FloatingContact() {
                 aria-label={open ? "Đóng liên hệ" : "Mở liên hệ"}
                 title="Liên hệ tư vấn"
               >
-                {/* Radar pulse rings */}
+                {/* Vòng radar xung */}
                 {!open && (
                   <>
                     <span className="radar-pulse-ring" />

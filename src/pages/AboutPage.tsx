@@ -11,7 +11,7 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* Page hero */}
+      {/* Hero của trang */}
       <section className="relative pt-20 pb-24 px-6 lg:px-12 bg-[#1c1a19] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <motion.div
@@ -53,7 +53,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Main introduction */}
+      {/* Giới thiệu chính */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -92,7 +92,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Mission */}
+          {/* Sứ mệnh */}
           <div className="bg-[#faf9f6] border border-[#eaeae1] p-8 lg:p-12 mb-20">
             <h3 className="font-serif text-2xl text-[#1c1a19] mb-6 text-center tracking-wide">
               Sứ Mệnh Của Chúng Tôi
@@ -165,7 +165,7 @@ export default function AboutPage() {
               Đối Tác Danh Tiếng
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {["Sala Garden Holdings", "Blackstones Funeral Services", "Viện Nghiên Cứu Phong Thủy Á Đông", "Bio-Green Sinh Học"].map((partner, i) => (
+              {["Tập đoàn Sala Garden", "Dịch vụ Tang lễ Hoàng Gia Việt", "Viện Nghiên Cứu Phong Thủy Á Đông", "Công Nghệ Sinh Học Bio-Green"].map((partner, i) => (
                 <div
                   key={i}
                   className="bg-white border border-[#eaeae1] p-6 text-center hover:border-[#b89b72] transition-luxury"

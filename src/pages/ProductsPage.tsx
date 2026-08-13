@@ -48,7 +48,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Filters & Grid */}
+      {/* Lưới bộ lọc & sản phẩm */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -150,7 +150,7 @@ export default function ProductsPage() {
         </motion.div>
       </section>
 
-      {/* Pricing note + CTA */}
+      {/* Ghi chú giá + lời kêu gọi hành động */}
       <section className="py-16 px-6 lg:px-12 bg-[#faf9f6] border-t border-[#eaeae1]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -185,7 +185,7 @@ export default function ProductsPage() {
         </motion.div>
       </section>
 
-      {/* Why invest */}
+      {/* Vì sao nên đầu tư */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
